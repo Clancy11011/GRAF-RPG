@@ -1,9 +1,8 @@
-[gd_scene format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=2 format=3 uid="uid://l6kjlcn71v8h"]
+
+[ext_resource type="PackedScene" uid="uid://occ2wrivkm56" path="res://Characters/player_character.tscn" id="1_vohjg"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "I love giraffes!
-"
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_vohjg")]
+position = Vector2(247, 189)
