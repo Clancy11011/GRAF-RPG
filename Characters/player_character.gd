@@ -37,3 +37,5 @@ func change_state():
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
+
+# Test
