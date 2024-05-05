@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=6 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
 [ext_resource type="PackedScene" uid="uid://dnjlgf3qam2nq" path="res://Characters/player_character_main.tscn" id="2_3esdj"]
+[ext_resource type="PackedScene" uid="uid://crjhopq3ff5bt" path="res://guard.tscn" id="3_ycq8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
 texture = ExtResource("2_2yl1e")
@@ -57,3 +58,6 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = -5
 layer_1/tile_data = PackedInt32Array(131081, 65536, 3, 131076, 196608, 3, 393225, 0, 0, 393220, 196608, 0, 458756, 0, 1, 458761, 131072, 0)
+
+[node name="Guard" parent="." instance=ExtResource("3_ycq8j")]
+position = Vector2(50, 94)
