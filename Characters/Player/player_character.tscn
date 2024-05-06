@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://occ2wrivkm56"]
 
 [ext_resource type="Texture2D" uid="uid://fgrhlc66oild" path="res://Assets/Walking Animations v6.png" id="1_g1ggc"]
-[ext_resource type="Script" path="res://Characters/player_character.gd" id="1_w8hah"]
+[ext_resource type="Script" path="res://Characters/Player/player_character_main.gd" id="1_w8hah"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n74j"]
 size = Vector2(88, 128)
