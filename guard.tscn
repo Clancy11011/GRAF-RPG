@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://bwnogd2jhhr53"]
+[gd_scene load_steps=31 format=3 uid="uid://bwnogd2jhhr53"]
 
 [ext_resource type="Script" path="res://guard.gd" id="1_skg3q"]
 [ext_resource type="Texture2D" uid="uid://bqir2e4cblhm0" path="res://Assets/Guard.png" id="1_u11h3"]
 [ext_resource type="Script" path="res://State Machine.gd" id="3_ddb14"]
 [ext_resource type="Script" path="res://Scripts/GuardIdle.gd" id="4_cj8ds"]
+[ext_resource type="Script" path="res://EnemyFollow.gd" id="5_jrlh2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8anr"]
 size = Vector2(13, 16)
@@ -265,8 +266,12 @@ parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_ddb14")
-initial_state = NodePath("EnemyIdle")
+initial_state = NodePath("Follow")
 
-[node name="EnemyIdle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+[node name="Idle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("4_cj8ds")
+enemy = NodePath("../..")
+
+[node name="Follow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("5_jrlh2")
 enemy = NodePath("../..")
