@@ -2,21 +2,38 @@ extends CharacterBody2D
 class_name GuardEnemy
 
 #@export var move_speed : float = 10
-#@export var starting_direction : Vector2 = Vector2(0, 1)
+@export var start_direction : Vector2 = Vector2(0, 1)
 
-#@onready var animation_tree = $AnimationTree
+@onready var animation_tree = $AnimationTree
+@onready var state_machine = animation_tree.get("parameters/playback")
 
-#func _ready():
-	#update_animation_parameters(starting_direction)
+func _ready():
+	update_animation_param(start_direction)
 
 func _physics_process(delta):
+	
+	update_animation_param(velocity * Vector2(1, -1))
+	
 	move_and_slide()
 	
-	if velocity.length() > 0:
-		$AnimationPlayer.play("walk_down")
+	change_state()
+	
+	#if velocity.length() > 0:
+	#	$AnimationPlayer.play("walk_down")
 		
-	if velocity.x > 0:
-		$Sprite2D.flip_h = false
-	else:
-		$Sprite2D.flip_h = true
+	#if velocity.x > 0:
+	#	$Sprite2D.flip_h = false
+	#else:
+	#	$Sprite2D.flip_h = true
 
+func update_animation_param(velocity : Vector2):
+	
+	if (velocity != Vector2.ZERO):
+		animation_tree.set("parameters/Walk/blend_position", velocity)
+		animation_tree.set("parameters/Idle/blend_position", velocity)
+		
+func change_state():
+	if (velocity != Vector2.ZERO):
+		state_machine.travel("Walk")
+	else:
+		state_machine.travel("Idle")

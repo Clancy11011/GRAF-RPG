@@ -29,5 +29,5 @@ func Physics_Update(delta: float):
 		
 	var direction = player.global_position - enemy.global_position
 	
-	if direction.length() < 30:
+	if direction.length() < 100 && move_direction.angle_to(player.global_position) < PI/4:
 		Transitioned.emit(self, "Follow")

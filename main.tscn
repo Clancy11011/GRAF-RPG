@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
 [ext_resource type="PackedScene" uid="uid://brtxbyy3hfea4" path="res://Characters/player_character_main.tscn" id="2_3esdj"]
-[ext_resource type="PackedScene" uid="uid://bwnogd2jhhr53" path="res://guard.tscn" id="3_ycq8j"]
+[ext_resource type="PackedScene" uid="uid://b2iojx7sda8qg" path="res://guard.tscn" id="3_ycq8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
 texture = ExtResource("2_2yl1e")
