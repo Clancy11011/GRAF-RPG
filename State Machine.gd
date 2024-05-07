@@ -12,12 +12,12 @@ func _ready():
 			child.Transitioned.connect(on_child_transition)
 			
 	if initial_state:
-		initial_state.Enter()
+		initial_state.enter()
 		current_state = initial_state
 
 func _process(delta):
 	if current_state:
-		current_state.Update(delta)
+		current_state.update(delta)
 
 func _physics_process(delta):
 	if current_state:
