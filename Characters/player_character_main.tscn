@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://brtxbyy3hfea4"]
+[gd_scene load_steps=29 format=3 uid="uid://brtxbyy3hfea4"]
 
 [ext_resource type="Script" path="res://Characters/player_character_main.gd" id="1_nuv5y"]
 [ext_resource type="Texture2D" uid="uid://5ctchepecaa" path="res://Assets/NewGiraffe_v2wIdle.png" id="2_2qxch"]
+[ext_resource type="Script" path="res://Scripts/camera/player_camera.gd" id="3_x34ti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
 size = Vector2(12, 7.26859)
@@ -265,3 +266,6 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="follow camera" type="Camera2D" parent="."]
+script = ExtResource("3_x34ti")
