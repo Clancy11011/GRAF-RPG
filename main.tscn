@@ -61,3 +61,4 @@ layer_1/tile_data = PackedInt32Array(131081, 65536, 3, 131076, 196608, 3, 393225
 
 [node name="Guard" parent="." instance=ExtResource("3_ycq8j")]
 position = Vector2(50, 94)
+start_direction = Vector2(0, 1)
