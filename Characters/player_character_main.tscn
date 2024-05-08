@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://brtxbyy3hfea4"]
 
-[ext_resource type="Texture2D" uid="uid://dmvjmflt4bd77" path="res://Assets/Giraffe (1).png" id="1_hj0uh"]
 [ext_resource type="Script" path="res://Characters/player_character_main.gd" id="1_nuv5y"]
+[ext_resource type="Texture2D" uid="uid://g360h1osnac" path="res://Assets/Giraffe.png" id="2_xu04b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
 size = Vector2(12, 7.26859)
@@ -120,7 +120,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [17, 18, 19, 18]
+"values": [17, 16, 17, 16]
 }
 
 [sub_resource type="Animation" id="Animation_t8ftn"]
@@ -242,9 +242,11 @@ script = ExtResource("1_nuv5y")
 start_direction = Vector2(2.08165e-12, -1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hj0uh")
+position = Vector2(21.5, 44)
+scale = Vector2(1.29183, 1.02921)
+texture = ExtResource("2_xu04b")
 hframes = 6
-vframes = 4
+vframes = 3
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

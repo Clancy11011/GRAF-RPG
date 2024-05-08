@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj6thd0ihe58l"
-path="res://.godot/imported/LogsAndWalls.png-94d48ec987477bc851a114203e7f45a3.ctex"
+uid="uid://ywhr74cr6475"
+path="res://.godot/imported/CobblePathTileSheet3.png-f2390ffbb58c482427180a35386d5d18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LogsAndWalls.png"
-dest_files=["res://.godot/imported/LogsAndWalls.png-94d48ec987477bc851a114203e7f45a3.ctex"]
+source_file="res://Tilesets/CobblePathTileSheet3.png"
+dest_files=["res://.godot/imported/CobblePathTileSheet3.png-f2390ffbb58c482427180a35386d5d18.ctex"]
 
 [params]
 
