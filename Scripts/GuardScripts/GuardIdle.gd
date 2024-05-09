@@ -10,7 +10,7 @@ var move_direction : Vector2
 var wander_time : float
 
 @export var current_states = enemy_states.MOVEDOWN
-enum enemy_states{MOVERIGHT, MOVELEFT, MOVEUP, MOVEDOWN}
+enum enemy_states{MOVERIGHT, MOVELEFT, MOVEUP, MOVEDOWN, PAUSE}
 
 var dir
 
@@ -32,6 +32,8 @@ func randomize_wander():
 			move_up()
 		enemy_states.MOVEDOWN:
 			move_down()
+		enemy_states.PAUSE:
+			move_pause()
 
 #func update(delta: float):
 #	if wander_time > 0:
@@ -60,8 +62,11 @@ func move_up():
 func move_down():
 	move_direction = Vector2.DOWN
 
+func move_pause():
+	move_direction = Vector2.ZERO
+
 func random_generation():
-	dir = randi() % 4
+	dir = randi() % 5
 	print(dir)
 	random_direction()
 	
@@ -75,6 +80,8 @@ func random_direction():
 			current_states = enemy_states.MOVEUP
 		3:
 			current_states = enemy_states.MOVEDOWN
+		4:
+			current_states = enemy_states.PAUSE
 
 func _on_timer_timeout():
 	random_generation()
