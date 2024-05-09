@@ -1,10 +1,10 @@
 [gd_scene load_steps=31 format=3 uid="uid://b2iojx7sda8qg"]
 
-[ext_resource type="Script" path="res://guard.gd" id="1_skg3q"]
+[ext_resource type="Script" path="res://Characters/Guard/guard.gd" id="1_odw2h"]
 [ext_resource type="Texture2D" uid="uid://bqir2e4cblhm0" path="res://Assets/Guard.png" id="1_u11h3"]
-[ext_resource type="Script" path="res://State Machine.gd" id="3_ddb14"]
-[ext_resource type="Script" path="res://Scripts/GuardIdle.gd" id="4_cj8ds"]
-[ext_resource type="Script" path="res://EnemyFollow.gd" id="5_jrlh2"]
+[ext_resource type="Script" path="res://Scripts/State/State Machine.gd" id="3_d3mdj"]
+[ext_resource type="Script" path="res://Scripts/GuardScripts/GuardIdle.gd" id="4_uvc55"]
+[ext_resource type="Script" path="res://Scripts/GuardScripts/EnemyFollow.gd" id="5_2di4v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8anr"]
 size = Vector2(13, 16)
@@ -241,7 +241,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(13.3704, 32.2874)
 
 [node name="Guard" type="CharacterBody2D"]
-script = ExtResource("1_skg3q")
+script = ExtResource("1_odw2h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_u11h3")
@@ -265,11 +265,11 @@ parameters/Idle/blend_position = Vector2(2.08165e-12, -0.1)
 parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("3_ddb14")
+script = ExtResource("3_d3mdj")
 initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("4_cj8ds")
+script = ExtResource("4_uvc55")
 enemy = NodePath("../..")
 
 [node name="Timer" type="Timer" parent="State Machine/Idle"]
@@ -277,7 +277,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="Follow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("5_jrlh2")
+script = ExtResource("5_2di4v")
 enemy = NodePath("../..")
 
 [connection signal="timeout" from="State Machine/Idle/Timer" to="State Machine/Idle" method="_on_timer_timeout"]

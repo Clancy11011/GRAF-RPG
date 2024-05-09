@@ -17,5 +17,5 @@ func Physics_Update(delta: float):
 	else:
 		enemy.velocity = Vector2()
 	
-	if direction.length() > 50:
+	if direction.length() > 100:
 		Transitioned.emit(self, "Idle")

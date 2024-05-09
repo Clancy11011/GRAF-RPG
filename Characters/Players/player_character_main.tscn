@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://brtxbyy3hfea4"]
 
-[ext_resource type="Script" path="res://Characters/player_character_main.gd" id="1_nuv5y"]
+[ext_resource type="Script" path="res://Characters/Players/player_character_main.gd" id="1_1t516"]
 [ext_resource type="Texture2D" uid="uid://5ctchepecaa" path="res://Assets/NewGiraffe_v2wIdle.png" id="2_2qxch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
@@ -238,7 +238,7 @@ states/Walk/position = Vector2(631.5, 100.875)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_sn5vr"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_j1q6t"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_wif4l")]
 
 [node name="PlayerCharacterMain" type="CharacterBody2D" groups=["Player"]]
-script = ExtResource("1_nuv5y")
+script = ExtResource("1_1t516")
 start_direction = Vector2(2.08165e-12, -1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
