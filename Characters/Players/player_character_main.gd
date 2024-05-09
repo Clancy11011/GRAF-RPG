@@ -9,8 +9,12 @@ extends CharacterBody2D
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 
+var player : CharacterBody2D
+
 func _ready():
 	update_animation_param(start_direction)
+	player = get_tree().get_first_node_in_group("Player")
+	PlayerVariables.spawn_coords = player.global_position
 
 func _physics_process(_delta):
 	

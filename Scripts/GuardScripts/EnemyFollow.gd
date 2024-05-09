@@ -17,8 +17,8 @@ func Physics_Update(delta: float):
 	else:
 		enemy.velocity = Vector2()
 		
-	#if direction.length() <= 25:
-		
+	if direction.length() <= 25:
+		player.global_position = PlayerVariables.spawn_coords
 	
 	if direction.length() > 100:
 		Transitioned.emit(self, "Idle")
