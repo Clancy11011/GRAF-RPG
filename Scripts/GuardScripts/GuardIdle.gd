@@ -14,6 +14,10 @@ enum enemy_states{MOVERIGHT, MOVELEFT, MOVEUP, MOVEDOWN, PAUSE}
 
 var dir
 
+const lines: Array[String] = [
+	"Hey!"
+]
+
 func enter():
 	print("enter enter")
 	player = get_tree().get_first_node_in_group("Player")
@@ -48,6 +52,8 @@ func Physics_Update(delta: float):
 	var direction = player.global_position - enemy.global_position
 	
 	if direction.length() < 100 && move_direction.angle_to(player.global_position) < PI/4:
+		await DialogManager.start_dialog(enemy.global_position, lines)
+		#DialogManager._force_dialog_finish()
 		Transitioned.emit(self, "Follow")
 
 func move_right():
