@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=23 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
 [ext_resource type="PackedScene" uid="uid://brtxbyy3hfea4" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://djv52mavbehie" path="res://Assets/Bush.png" id="5_ebcau"]
 [ext_resource type="Texture2D" uid="uid://b752brm8qfqvh" path="res://Assets/SmallTree.png" id="6_rtwia"]
 [ext_resource type="Script" path="res://Scripts/Camera/PlayerCamera.gd" id="7_e0n6t"]
+[ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
+[ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
 texture = ExtResource("2_2yl1e")
@@ -89,6 +91,33 @@ sources/3 = SubResource("TileSetAtlasSource_o2ptj")
 sources/4 = SubResource("TileSetAtlasSource_s3lha")
 sources/5 = SubResource("TileSetAtlasSource_qcbb3")
 
+[sub_resource type="Gradient" id="Gradient_vn7mg"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6j8j4"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_33jwv"]
+seamless = true
+color_ramp = SubResource("Gradient_vn7mg")
+noise = SubResource("FastNoiseLite_6j8j4")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rmh7g"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pkdsv"]
+seamless = true
+noise = SubResource("FastNoiseLite_rmh7g")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mep7n"]
+shader = ExtResource("9_b07br")
+shader_parameter/scroll1 = Vector2(0.05, 0.05)
+shader_parameter/scroll2 = Vector2(-0.05, -0.05)
+shader_parameter/distortion_strength = 0.2
+shader_parameter/tone_color = Color(0.227451, 0.470588, 0.92549, 1)
+shader_parameter/top_color = Color(1, 0.996078, 1, 1)
+shader_parameter/light_start = 0.275
+shader_parameter/light_end = 0.4
+shader_parameter/noise1 = SubResource("NoiseTexture2D_33jwv")
+shader_parameter/noise2 = SubResource("NoiseTexture2D_pkdsv")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -118,3 +147,9 @@ tilemap = NodePath("../../TileMap")
 
 [node name="Guard" parent="." instance=ExtResource("3_ycq8j")]
 position = Vector2(50, 94)
+
+[node name="SpriteWaterv013" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_mep7n")
+position = Vector2(165, 162.5)
+scale = Vector2(11, 3.8125)
+texture = ExtResource("10_ye3o3")
