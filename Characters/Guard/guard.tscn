@@ -272,7 +272,7 @@ initial_state = NodePath("Idle")
 script = ExtResource("4_uvc55")
 enemy = NodePath("../..")
 
-[node name="Timer" type="Timer" parent="State Machine/Idle"]
+[node name="WalkTimer" type="Timer" parent="State Machine/Idle"]
 wait_time = 3.0
 autostart = true
 
@@ -280,4 +280,4 @@ autostart = true
 script = ExtResource("5_2di4v")
 enemy = NodePath("../..")
 
-[connection signal="timeout" from="State Machine/Idle/Timer" to="State Machine/Idle" method="_on_timer_timeout"]
+[connection signal="timeout" from="State Machine/Idle/WalkTimer" to="State Machine/Idle" method="_on_timer_timeout"]

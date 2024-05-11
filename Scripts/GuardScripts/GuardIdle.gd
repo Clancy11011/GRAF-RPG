@@ -52,8 +52,6 @@ func Physics_Update(delta: float):
 	var direction = player.global_position - enemy.global_position
 	
 	if direction.length() < 100 && move_direction.angle_to(player.global_position) < PI/4:
-		await DialogManager.start_dialog(enemy.global_position, lines)
-		#DialogManager._force_dialog_finish()
 		Transitioned.emit(self, "Follow")
 
 func move_right():
@@ -91,5 +89,6 @@ func random_direction():
 
 func _on_timer_timeout():
 	random_generation()
-	$Timer.start()
+	$WalkTimer.start()
 	randomize_wander()
+

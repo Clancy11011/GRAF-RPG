@@ -53,6 +53,3 @@ func _unhandled_input(event):
 		
 		_show_text_box()
 
-
-func _force_dialog_finish():
-	text_box.queue_free()
