@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export var move_speed : float = 100
 @export var start_direction : Vector2 = Vector2(0, 1)
@@ -7,6 +8,7 @@ extends CharacterBody2D
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
+
 
 func _ready():
 	update_animation_param(start_direction)
@@ -37,3 +39,5 @@ func change_state():
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
+		
+		

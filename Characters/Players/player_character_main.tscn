@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://brtxbyy3hfea4"]
+[gd_scene load_steps=29 format=3 uid="uid://brtxbyy3hfea4"]
 
 [ext_resource type="Script" path="res://Characters/Players/player_character_main.gd" id="1_1t516"]
 [ext_resource type="Texture2D" uid="uid://5ctchepecaa" path="res://Assets/NewGiraffe_v2wIdle.png" id="2_2qxch"]
+[ext_resource type="PackedScene" uid="uid://ddwnyk3e8sq7g" path="res://UI/Healthbar/healthbar.tscn" id="3_4qp15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
 size = Vector2(12, 7.26859)
@@ -265,3 +266,18 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="health" type="CanvasLayer" parent="."]
+
+[node name="healthbar" parent="health" instance=ExtResource("3_4qp15")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -121.0
+offset_top = -19.0
+offset_right = -5.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0

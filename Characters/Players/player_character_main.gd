@@ -8,13 +8,16 @@ extends CharacterBody2D
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
+@onready var healthbar = $health/healthbar
 
 var player : CharacterBody2D
 
 func _ready():
+	var starting_health = 100
 	update_animation_param(start_direction)
 	player = get_tree().get_first_node_in_group("Player")
 	PlayerVariables.spawn_coords = player.global_position
+	healthbar.init_health(starting_health)
 
 func _physics_process(_delta):
 	
@@ -42,3 +45,11 @@ func change_state():
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
+		
+		
+#func _set_health(value):
+#	super._set_health(value)
+#	if health <= 0 && is_alive:
+#		_die()
+#		
+#	healthbar.health = health
