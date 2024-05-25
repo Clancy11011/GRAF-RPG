@@ -1,7 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=33 format=3 uid="uid://l6kjlcn71v8h"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_jk5ca"]
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
 [ext_resource type="PackedScene" uid="uid://brtxbyy3hfea4" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
+[ext_resource type="PackedScene" uid="uid://c6kho3ckutwqa" path="res://UI/DayNightCycle/audio/sound_machine.tscn" id="2_o0f4p"]
 [ext_resource type="Texture2D" uid="uid://ywhr74cr6475" path="res://Tilesets/CobblePathTileSheet3.png" id="3_6lvu6"]
 [ext_resource type="Texture2D" uid="uid://c566xubq302p0" path="res://Assets/UnderwaterLandscape.png" id="3_y31j2"]
 [ext_resource type="PackedScene" uid="uid://b2iojx7sda8qg" path="res://Characters/Guard/guard.tscn" id="3_ycq8j"]
@@ -13,6 +15,9 @@
 [ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
 [ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
 [ext_resource type="PackedScene" uid="uid://c0altoly0vi4y" path="res://Characters/NPCs/safari_guy.tscn" id="13_6ft45"]
+[ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle.gd" id="14_1cbwh"]
+[ext_resource type="Texture2D" uid="uid://b2801m7m1008j" path="res://UI_Assets/DayNightCycle/daynightcycle-gradient-texture.tres" id="15_8m44u"]
+[ext_resource type="PackedScene" uid="uid://b4mitotcubsj0" path="res://UI/DayNightCycle/daynightcycle_ui.tscn" id="16_fmtir"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
 texture = ExtResource("2_2yl1e")
@@ -317,7 +322,10 @@ shader_parameter/light_end = 0.645
 shader_parameter/noise1 = SubResource("NoiseTexture2D_33jwv")
 shader_parameter/noise2 = SubResource("NoiseTexture2D_pkdsv")
 
-[node name="Node2D" type="Node2D"]
+[node name="main" type="Node2D"]
+script = ExtResource("1_jk5ca")
+
+[node name="SoundMachine" parent="." instance=ExtResource("2_o0f4p")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_0emog")
@@ -363,3 +371,11 @@ texture = ExtResource("10_ye3o3")
 
 [node name="SafariGuy" parent="." instance=ExtResource("13_6ft45")]
 position = Vector2(408, 96)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("14_1cbwh")
+gradient_texture = ExtResource("15_8m44u")
+
+[node name="UIOverlay" type="CanvasLayer" parent="."]
+
+[node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("16_fmtir")]
