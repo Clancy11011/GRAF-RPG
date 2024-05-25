@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=28 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
 [ext_resource type="PackedScene" uid="uid://brtxbyy3hfea4" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/Camera/PlayerCamera.gd" id="7_e0n6t"]
 [ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
 [ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
+[ext_resource type="PackedScene" uid="uid://c0altoly0vi4y" path="res://Characters/NPCs/safari_guy.tscn" id="13_6ft45"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
 texture = ExtResource("2_2yl1e")
@@ -359,3 +360,6 @@ material = SubResource("ShaderMaterial_mep7n")
 position = Vector2(368, 248)
 scale = Vector2(6, 5)
 texture = ExtResource("10_ye3o3")
+
+[node name="SafariGuy" parent="." instance=ExtResource("13_6ft45")]
+position = Vector2(408, 96)
