@@ -3,7 +3,7 @@
 [ext_resource type="Shader" path="res://UI_Assets/DayNightCycle/pixelperfect.gdshader" id="1_5i3u0"]
 [ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle_ui.gd" id="2_8tcnw"]
 [ext_resource type="Texture2D" uid="uid://boieh44wp35m6" path="res://UI_Assets/DayNightCycle/daynightcycle-ui.png" id="3_nf8nd"]
-[ext_resource type="Texture2D" uid="uid://dpgkgn37hq1r" path="res://UI_Assets/DayNightCycle/dayNightCycleBamboo-UI.png" id="3_y4ccu"]
+[ext_resource type="Texture2D" uid="uid://bokxpqymdtww2" path="res://UI_Assets/DayNightCycle/daynightcycle-ui-bamboo-no-arrow.png" id="3_tvs2u"]
 [ext_resource type="FontFile" uid="uid://dt6jbuskqvs7g" path="res://Assets/Fonts/pixelmix/pixelmix.ttf" id="4_xbu5t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhbnj"]
@@ -34,14 +34,14 @@ material = SubResource("ShaderMaterial_8xwu1")
 layout_mode = 0
 offset_right = 73.0
 offset_bottom = 43.0
-texture = ExtResource("3_y4ccu")
+texture = ExtResource("3_tvs2u")
 
 [node name="CenterContainerDay" type="CenterContainer" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 9.0
-offset_right = 50.0
-offset_bottom = 20.0
+offset_left = 8.0
+offset_top = 12.0
+offset_right = 54.0
+offset_bottom = 23.0
 
 [node name="DayLabelBackground" type="Label" parent="CenterContainerDay"]
 unique_name_in_owner = true
@@ -66,10 +66,10 @@ metadata/_edit_lock_ = true
 
 [node name="CenterContainerTime" type="CenterContainer" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 29.0
-offset_right = 51.0
-offset_bottom = 40.0
+offset_left = 7.0
+offset_top = 32.0
+offset_right = 54.0
+offset_bottom = 43.0
 
 [node name="TimeLabelBackground" type="Label" parent="CenterContainerTime"]
 unique_name_in_owner = true

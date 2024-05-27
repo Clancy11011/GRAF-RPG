@@ -6,8 +6,8 @@ extends Control
 @onready var invLeftArmor: Inventory = preload("res://Characters/Players/Inventory/player_armor_left.tres")
 @onready var invRightArmor: Inventory = preload("res://Characters/Players/Inventory/player_armor_right.tres")
 @onready var slotsMain: Array = $NinePatchRect/maininventory.get_children()
-@onready var slotsLeft: Array = $NinePatchRect/leftSlots.get_children()
-@onready var slotsRight: Array = $NinePatchRect/rightSlots.get_children()
+#@onready var slotsLeft: Array = $NinePatchRect/leftSlots.get_children()
+#@onready var slotsRight: Array = $NinePatchRect/rightSlots.get_children()
 
 var is_open = false
 
@@ -17,7 +17,6 @@ func _ready():
 	invMain.update.connect(update_slots)
 	update_slots()
 	close()
-	pass # Replace with function body.
 	
 
 func update_slots():
@@ -26,12 +25,12 @@ func update_slots():
 		slotsMain[i].update(invMain.slots[i])
 		
 	#update the left armor inv slots
-	for i in range(min(invLeftArmor.slots.size(), slotsLeft.size())):
-		slotsLeft[i].update(invLeftArmor.slots[i])
+	#for i in range(min(invLeftArmor.slots.size(), slotsLeft.size())):
+	#	slotsLeft[i].update(invLeftArmor.slots[i])
 	
 	# update the right armor inv slots
-	for i in range(min(invRightArmor.slots.size(), slotsRight.size())):
-		slotsRight[i].update(invRightArmor.slots[i])
+	#for i in range(min(invRightArmor.slots.size(), slotsRight.size())):
+	#	slotsRight[i].update(invRightArmor.slots[i])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -19,3 +19,15 @@ func insert(item: InventoryItem):
 			emptySlots[0].item = item
 			emptySlots[0].amount = 1
 	update.emit()
+
+
+func insert_at_location(item: InventoryItem, slot_index: int):
+	if slot_index < 0 or slot_index >= slots.size():
+		#Invalid slot index
+		return
+		
+	if slots[slot_index].item == item:
+		#Item is already in this slot, stack it
+		slots[slot_index].amount +=1
+	# checks to see if the slot is empty
+	

@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dntxj8qbof468"]
+[gd_scene load_steps=11 format=3 uid="uid://dntxj8qbof468"]
 
 [ext_resource type="Script" path="res://UI/inventory/ui/inventory_ui.gd" id="1_nxo3y"]
 [ext_resource type="Texture2D" uid="uid://dajijvyqp4kay" path="res://UI_Assets/Inventory/inventory.png" id="2_2uyyf"]
 [ext_resource type="PackedScene" uid="uid://dn0do5kdmeyur" path="res://UI/inventory/ui/inventory_ui_slot_dark.tscn" id="3_0m6sb"]
-[ext_resource type="PackedScene" uid="uid://d35rwkxn62myq" path="res://UI/inventory/ui/inventory_ui_slot.tscn" id="4_gbr8e"]
 [ext_resource type="PackedScene" uid="uid://cfyb3eur3pdr" path="res://UI/inventory/ui/inventory_ui_head_armor_slot.tscn" id="5_3c2uo"]
 [ext_resource type="PackedScene" uid="uid://be33l2s3xbl20" path="res://UI/inventory/ui/inventory_ui_chest_armor_slot.tscn" id="6_uxkpu"]
 [ext_resource type="PackedScene" uid="uid://cc6ieaxbfcr8s" path="res://UI/inventory/ui/inventory_ui_pants_armor_slot.tscn" id="7_oaekh"]
@@ -66,58 +65,58 @@ layout_mode = 2
 [node name="inventory_ui_slot_dark9" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark10" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot2" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark11" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot3" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark12" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot4" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark13" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot5" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark14" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot6" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark15" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot7" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark16" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot8" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark17" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot9" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark18" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot10" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark19" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot11" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark20" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot12" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark21" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot13" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark22" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot14" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark23" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot15" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark24" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot16" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark25" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot17" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark26" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
-[node name="Inventory_UI_Slot18" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+[node name="inventory_ui_slot_dark27" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
 layout_mode = 2
 
 [node name="leftSlots" type="GridContainer" parent="NinePatchRect"]
