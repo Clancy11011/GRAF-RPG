@@ -2,10 +2,7 @@
 
 [ext_resource type="Script" path="res://UI_Assets/SpeechBox/text_box.gd" id="1_1vdjm"]
 [ext_resource type="Texture2D" uid="uid://bq1jip5anl2nx" path="res://UI_Assets/SpeechBox/SpeechBubble.png" id="1_axt0m"]
-
-[sub_resource type="SystemFont" id="SystemFont_qp8yr"]
-font_names = PackedStringArray("Poleno")
-oversampling = 10.0
+[ext_resource type="SystemFont" uid="uid://bci11bhh41w8w" path="res://PolenoFont.tres" id="3_krjh7"]
 
 [node name="text_box" type="MarginContainer"]
 offset_right = 32.0
@@ -32,7 +29,7 @@ theme_override_constants/margin_bottom = 8
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_qp8yr")
+theme_override_fonts/font = ExtResource("3_krjh7")
 vertical_alignment = 1
 
 [node name="LetterDisplayTimer" type="Timer" parent="."]
