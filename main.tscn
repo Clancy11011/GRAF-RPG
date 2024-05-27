@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_jk5ca"]
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
-[ext_resource type="PackedScene" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
+[ext_resource type="PackedScene" uid="uid://brtxbyy3hfea4" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
 [ext_resource type="PackedScene" uid="uid://c6kho3ckutwqa" path="res://UI/DayNightCycle/audio/sound_machine.tscn" id="2_o0f4p"]
 [ext_resource type="Texture2D" uid="uid://ywhr74cr6475" path="res://Tilesets/CobblePathTileSheet3.png" id="3_6lvu6"]
 [ext_resource type="Texture2D" uid="uid://c566xubq302p0" path="res://Assets/UnderwaterLandscape.png" id="3_y31j2"]

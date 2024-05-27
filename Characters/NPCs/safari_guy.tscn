@@ -1,28 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://c0altoly0vi4y"]
+[gd_scene load_steps=18 format=3 uid="uid://c0altoly0vi4y"]
 
 [ext_resource type="Texture2D" uid="uid://dwkxdoxl3dus6" path="res://Tilesets/NPCs/SafariGuy.png" id="1_26aqe"]
 [ext_resource type="Script" path="res://Characters/NPCs/safari_guy.gd" id="1_741d4"]
 [ext_resource type="Script" path="res://Characters/NPCs/State Machine.gd" id="3_nuld5"]
+[ext_resource type="PackedScene" uid="uid://dqfhlcomcciyd" path="res://Interaction/Interaction Area/interaction_area.tscn" id="4_t1cwr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdq5u"]
 size = Vector2(14, 16)
-
-[sub_resource type="Animation" id="Animation_8em2m"]
-resource_name = "idle_down"
-length = 1.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
 
 [sub_resource type="Animation" id="Animation_yuaty"]
 length = 0.001
@@ -39,8 +23,8 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_t20hs"]
-resource_name = "idle_up"
+[sub_resource type="Animation" id="Animation_8em2m"]
+resource_name = "idle_down"
 length = 1.6
 loop_mode = 1
 tracks/0/type = "value"
@@ -53,7 +37,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [6, 7]
+"values": [0, 1]
 }
 
 [sub_resource type="Animation" id="Animation_g53cg"]
@@ -90,6 +74,23 @@ tracks/0/keys = {
 "values": [12, 13]
 }
 
+[sub_resource type="Animation" id="Animation_t20hs"]
+resource_name = "idle_up"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 7]
+}
+
 [sub_resource type="Animation" id="Animation_d320l"]
 resource_name = "walk_down"
 length = 1.6
@@ -105,23 +106,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [2, 3, 4, 5]
-}
-
-[sub_resource type="Animation" id="Animation_dopx0"]
-resource_name = "walk_up"
-length = 1.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [8, 9, 10, 11]
 }
 
 [sub_resource type="Animation" id="Animation_2x2lt"]
@@ -158,6 +142,23 @@ tracks/0/keys = {
 "values": [14, 15, 16, 17]
 }
 
+[sub_resource type="Animation" id="Animation_dopx0"]
+resource_name = "walk_up"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ia7f"]
 _data = {
 "RESET": SubResource("Animation_yuaty"),
@@ -173,6 +174,9 @@ _data = {
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bnvev"]
 graph_offset = Vector2(-30.2098, 20.8425)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j042t"]
+radius = 28.0713
 
 [node name="SafariGuy" type="CharacterBody2D"]
 script = ExtResource("1_741d4")
@@ -195,3 +199,9 @@ tree_root = SubResource("AnimationNodeStateMachine_bnvev")
 
 [node name="State Machine" type="Node" parent="."]
 script = ExtResource("3_nuld5")
+
+[node name="InteractionArea" parent="." instance=ExtResource("4_t1cwr")]
+action_name = "talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_j042t")
