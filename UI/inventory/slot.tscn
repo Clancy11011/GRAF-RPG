@@ -1,28 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://phb372ocfv7y"]
+[gd_scene load_steps=3 format=3 uid="uid://xnjug8o62xxd"]
 
 [ext_resource type="Script" path="res://UI/inventory/slot.gd" id="1_xj5lb"]
-[ext_resource type="Script" path="res://UI/inventory/stats.gd" id="2_h6ai2"]
+[ext_resource type="Script" path="res://UI/inventory/stats.gd" id="2_fao22"]
 
 [node name="slot" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(16, 16)
-offset_right = 16.0
-offset_bottom = 16.0
 script = ExtResource("1_xj5lb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-script = ExtResource("2_h6ai2")
+script = ExtResource("2_fao22")
 
-[node name="Control" type="Control" parent="."]
+[node name="debug" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
-
-[node name="Amount" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 10.0
-offset_right = 36.0
-offset_bottom = 36.0
-scale = Vector2(0.25, 0.25)
-text = "999"
-horizontal_alignment = 2
+size_flags_vertical = 8
+text = "0"

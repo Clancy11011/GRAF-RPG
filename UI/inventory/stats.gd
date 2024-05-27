@@ -1,19 +1,22 @@
 extends TextureRect
 
 @export var slot_type: int = 0
-@export var amount: int = 0
 
-#@export var amount = 0:
-#	set(value):
-#		amount = value
-#		%amount.text = str(amount)
-
+@export var ATK = 0: 
+	set(value):
+		ATK = value
+		%debug.text = str(ATK)
+		
+		if get_parent() is PassiveSlot:
+			get_parent().get_parent().calculate()
+		
 @onready var property: Dictionary = {"TEXTURE": texture,
-									"AMOUNT": amount,
-									"SLOT_TYPE": slot_type }:
+									"ATK": ATK,
+									"SLOT_TYPE": slot_type}:
 	set(value):
 		property = value
 		
 		texture = property["TEXTURE"]
-		amount = property["AMOUNT"]
+		ATK = property["ATK"]
 		slot_type = property["SLOT_TYPE"]
+		

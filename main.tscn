@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=35 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_jk5ca"]
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
@@ -14,15 +14,12 @@
 [ext_resource type="Script" path="res://Scripts/Camera/PlayerCamera.gd" id="7_e0n6t"]
 [ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
 [ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
-[ext_resource type="PackedScene" uid="uid://h2j58va6ce5u" path="res://Items/pistol/pistol_collectable.tscn" id="12_qg16m"]
 [ext_resource type="PackedScene" uid="uid://c0altoly0vi4y" path="res://Characters/NPCs/safari_guy.tscn" id="13_6ft45"]
 [ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle.gd" id="14_1cbwh"]
 [ext_resource type="Texture2D" uid="uid://b2801m7m1008j" path="res://UI_Assets/DayNightCycle/daynightcycle-gradient-texture.tres" id="15_8m44u"]
 [ext_resource type="PackedScene" uid="uid://b4mitotcubsj0" path="res://UI/DayNightCycle/daynightcycle_ui.tscn" id="16_fmtir"]
-[ext_resource type="PackedScene" uid="uid://cuy5oujrdbfir" path="res://Items/apple/apple_collectable.tscn" id="18_x1tfd"]
-[ext_resource type="PackedScene" uid="uid://tb2vyt7ph2yf" path="res://Assets/items/ak47/ak47.tscn" id="21_110x6"]
-[ext_resource type="PackedScene" uid="uid://i3odgob2e7eu" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="22_5ll41"]
-[ext_resource type="PackedScene" uid="uid://dsjl788nfm1g1" path="res://UI/inventory/ui/inv_ui.tscn" id="23_5s4wh"]
+[ext_resource type="PackedScene" uid="uid://cdodcwognee1u" path="res://Items/abstract_item.tscn" id="20_32880"]
+[ext_resource type="PackedScene" uid="uid://pcq0lh82dakr" path="res://UI/inventory/ui/inventory_ui.tscn" id="22_5c78q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
 texture = ExtResource("2_2yl1e")
@@ -353,17 +350,8 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(851989, 6, 0, 851990, 6, 0, 851991, 6, 0, 851992, 6, 0, 851988, 65542, 1, 917524, 65542, 0, 983060, 65542, 0, 1048596, 65542, 0, 1114132, 131078, 1, 1114133, 131078, 0, 1114134, 131078, 0, 1114135, 131078, 0, 1114136, 131078, 0, 1114137, 6, 2, 1048601, 6, 1, 983065, 6, 1, 917529, 6, 1, 851993, 65542, 2, 983062, 131074, 2, 917528, 2, 3)
 
-[node name="apple_collectable" parent="." instance=ExtResource("18_x1tfd")]
-position = Vector2(210, 47)
-
-[node name="apple_collectable3" parent="." instance=ExtResource("18_x1tfd")]
-position = Vector2(213, 64)
-
-[node name="ak47_collectable" parent="." instance=ExtResource("21_110x6")]
-position = Vector2(212, 93)
-
-[node name="pistol_collectable" parent="." instance=ExtResource("12_qg16m")]
-position = Vector2(381, 173)
+[node name="Guard" parent="." instance=ExtResource("3_ycq8j")]
+position = Vector2(50, 94)
 
 [node name="PlayerCharacterMain" parent="." instance=ExtResource("2_3esdj")]
 position = Vector2(169, 77)
@@ -375,9 +363,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("7_e0n6t")
 tilemap = NodePath("../../TileMap")
-
-[node name="Guard" parent="." instance=ExtResource("3_ycq8j")]
-position = Vector2(50, 94)
 
 [node name="SpriteWaterv013" type="Sprite2D" parent="."]
 z_index = -5
@@ -397,26 +382,24 @@ gradient_texture = ExtResource("15_8m44u")
 
 [node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("16_fmtir")]
 
-[node name="inventory_hotbar" parent="UIOverlay" instance=ExtResource("22_5ll41")]
+[node name="Inventory_UI" parent="UIOverlay" instance=ExtResource("22_5c78q")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = 56.0
-offset_right = -96.0
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -88.0
+offset_top = 11.0
+offset_right = -88.0
+offset_bottom = 11.0
 
-[node name="inv_ui" parent="UIOverlay" instance=ExtResource("23_5s4wh")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -66.0
-offset_right = 96.0
-offset_bottom = 66.0
+[node name="AbstractItem" parent="." instance=ExtResource("20_32880")]
+position = Vector2(309, 30)
+
+[node name="AbstractItem2" parent="." instance=ExtResource("20_32880")]
+position = Vector2(316, 155)
+ID = "1"
+
+[node name="AbstractItem3" parent="." instance=ExtResource("20_32880")]
+position = Vector2(386, 167)
+ID = "2"

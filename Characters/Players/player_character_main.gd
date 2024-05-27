@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var move_speed : float = 100
 @export var start_direction : Vector2 = Vector2(0, 1)
 #@export var inv: Inventory
-@onready var inv: Inventory = preload("res://Characters/Players/Inventory/player_inventory.tres")
+
 
 # parameters/Idle/blend_position
 # parameters/Walk/blend_position
@@ -51,9 +51,11 @@ func change_state():
 	else:
 		state_machine.travel("Idle")
 		
-		
-func collect(item: InventoryItem):
-	inv.insert(item)
+
+	
+
+	
+	
 
 #func _set_health(value):
 #	super._set_health(value)
