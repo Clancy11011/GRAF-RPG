@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @export var move_speed : float = 100
 @export var start_direction : Vector2 = Vector2(0, 1)
-@export var inv: Inventory
+#@export var inv: Inventory
+@onready var inv: Inventory = preload("res://Characters/Players/Inventory/player_inventory.tres")
 
 # parameters/Idle/blend_position
 # parameters/Walk/blend_position
@@ -10,6 +11,8 @@ extends CharacterBody2D
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 @onready var healthbar = $health/healthbar
+@onready var interaction_area: InteractionArea = $InteractionArea
+
 
 var player : CharacterBody2D
 
@@ -18,6 +21,7 @@ func _ready():
 	update_animation_param(start_direction)
 	player = get_tree().get_first_node_in_group("Player")
 	PlayerVariables.spawn_coords = player.global_position
+	
 	healthbar.init_health(starting_health)
 
 func _physics_process(_delta):
@@ -48,9 +52,8 @@ func change_state():
 		state_machine.travel("Idle")
 		
 		
-func collect(item):
+func collect(item: InventoryItem):
 	inv.insert(item)
-	
 
 #func _set_health(value):
 #	super._set_health(value)

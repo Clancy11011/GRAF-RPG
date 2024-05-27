@@ -19,14 +19,12 @@ const lines: Array[String] = [
 ]
 
 func enter():
-	print("enter enter")
 	player = get_tree().get_first_node_in_group("Player")
 	randomize_wander()
 
 func randomize_wander():
 	#move_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
 	#wander_time = randf_range(1, 3)
-	print("enter random wander")
 	match current_states:
 		enemy_states.MOVERIGHT:
 			move_right()
@@ -71,7 +69,6 @@ func move_pause():
 
 func random_generation():
 	dir = randi() % 5
-	print(dir)
 	random_direction()
 	
 func random_direction():

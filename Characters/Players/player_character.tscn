@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://occ2wrivkm56"]
+[gd_scene load_steps=28 format=3 uid="uid://bx4qimk516454"]
 
 [ext_resource type="Script" path="res://Characters/Players/player_character.gd" id="1_2orgs"]
 [ext_resource type="Texture2D" uid="uid://fgrhlc66oild" path="res://Assets/Walking Animations v6.png" id="2_uo3af"]
