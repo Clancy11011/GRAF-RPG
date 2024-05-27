@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coy5mhwwtx2g4"
-path="res://.godot/imported/.png-b15e571576f1152e0fd07948d2b3969d.ctex"
+uid="uid://b3eyoeo5w3bw6"
+path="res://.godot/imported/inventoryHeadArmorSlot.png-632a7c71be6fb583dbfae6dda9071779.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI_Assets/Inventory/.png"
-dest_files=["res://.godot/imported/.png-b15e571576f1152e0fd07948d2b3969d.ctex"]
+source_file="res://UI_Assets/Inventory/inventoryHeadArmorSlot.png"
+dest_files=["res://.godot/imported/inventoryHeadArmorSlot.png-632a7c71be6fb583dbfae6dda9071779.ctex"]
 
 [params]
 

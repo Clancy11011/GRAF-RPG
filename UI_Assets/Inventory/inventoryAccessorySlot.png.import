@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f5bj2mbnsab4"
-path="res://.godot/imported/playerinventorybamboo.png-37accbf3d1a69d4352099c46aab64562.ctex"
+uid="uid://dr6xjnm7vrjve"
+path="res://.godot/imported/inventoryAccessorySlot.png-131a4c9b6b13bc8236bb1b55294eb63f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI_Assets/Inventory/playerinventorybamboo.png"
-dest_files=["res://.godot/imported/playerinventorybamboo.png-37accbf3d1a69d4352099c46aab64562.ctex"]
+source_file="res://UI_Assets/Inventory/inventoryAccessorySlot.png"
+dest_files=["res://.godot/imported/inventoryAccessorySlot.png-131a4c9b6b13bc8236bb1b55294eb63f.ctex"]
 
 [params]
 

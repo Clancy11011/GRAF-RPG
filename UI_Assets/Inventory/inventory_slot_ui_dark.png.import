@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chck5y0bfihjb"
-path="res://.godot/imported/inventoryBamboo.png-3ef3acbc71f08fe177c80900139ea4a6.ctex"
+uid="uid://dpq1jbvue6rfb"
+path="res://.godot/imported/inventory_slot_ui_dark.png-db4d5782d9d78273a1f3bef2c28ea9b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI_Assets/Inventory/inventoryBamboo.png"
-dest_files=["res://.godot/imported/inventoryBamboo.png-3ef3acbc71f08fe177c80900139ea4a6.ctex"]
+source_file="res://UI_Assets/Inventory/inventory_slot_ui_dark.png"
+dest_files=["res://.godot/imported/inventory_slot_ui_dark.png-db4d5782d9d78273a1f3bef2c28ea9b9.ctex"]
 
 [params]
 

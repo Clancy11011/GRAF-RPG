@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coy5mhwwtx2g4"
-path="res://.godot/imported/.png-b15e571576f1152e0fd07948d2b3969d.ctex"
+uid="uid://de2awkn22sie6"
+path="res://.godot/imported/inventoryLegsArmorSlot.png-c7fc55b9ef1c18b90331cd967bd18fee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI_Assets/Inventory/.png"
-dest_files=["res://.godot/imported/.png-b15e571576f1152e0fd07948d2b3969d.ctex"]
+source_file="res://UI_Assets/Inventory/inventoryLegsArmorSlot.png"
+dest_files=["res://.godot/imported/inventoryLegsArmorSlot.png-c7fc55b9ef1c18b90331cd967bd18fee.ctex"]
 
 [params]
 
