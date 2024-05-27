@@ -5,111 +5,111 @@
 
 [sub_resource type="Resource" id="Resource_ypwa3"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_ghrvw"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_o6mrt"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_7ympv"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_f2wpy"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_cm154"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_yfya3"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_j32m1"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_54kvh"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_fef8d"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_0ht7h"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_6qj7x"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_4ness"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_egjp0"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_huhr5"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_mv6ml"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_276gx"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_4gc2h"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_phnjn"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_c6k7o"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_oejkv"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_ix0t8"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_d5qc1"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_6jbpl"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_61mf8"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_viiac"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_sfx6i"]
 script = ExtResource("2_0bdrb")
-amount = 0
+amount = null
 
 [resource]
 script = ExtResource("3_5m6b5")

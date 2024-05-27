@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://cproyxcxfoc5g"]
+
+[ext_resource type="Texture2D" uid="uid://b3y3yllhu6apc" path="res://UI_Assets/Inventory/hotbarbamboo.png" id="1_q0l5o"]
+
+[sub_resource type="GDScript" id="GDScript_jcj7e"]
+script/source = "extends Control
+
+@onready var invMain: Inventory = preload(\"res://Characters/Players/Inventory/player_inventory.tres\")
+@onready var slotsMain: Array = $NinePatchRect/GridContainer.get_children()
+
+var is_open = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	invMain.update.connect(update_slots)
+	update_slots()
+	pass # Replace with function body.
+
+
+func update_slots():
+	#update the main inv slots
+	for i in range(min(invMain.slots.size(), slotsMain.size())):
+		slotsMain[i].update(invMain.slots[i])
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if Input.is_action_just_pressed(\"q\"):
+		if is_open:
+			close()
+		else:
+			open()
+	pass
+	
+	
+func close():
+	visible = true
+	is_open = false
+
+
+func open():
+	visible = false
+	is_open = true
+"
+
+[node name="inventory_hotbar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = SubResource("GDScript_jcj7e")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(192, 33)
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 33.0
+texture = ExtResource("1_q0l5o")
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+custom_minimum_size = Vector2(192, 33)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 41.0
+columns = 9

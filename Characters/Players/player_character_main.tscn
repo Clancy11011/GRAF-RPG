@@ -271,14 +271,8 @@ parameters/Walk/blend_position = Vector2(0, 0)
 [node name="health" type="CanvasLayer" parent="."]
 
 [node name="healthbar" parent="health" instance=ExtResource("3_4qp15")]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -121.0
-offset_top = -19.0
-offset_right = -5.0
-offset_bottom = -17.0
-grow_horizontal = 2
-grow_vertical = 0
+offset_left = 3.0
+offset_top = 57.0
+offset_right = 119.0
+offset_bottom = 59.0
+scale = Vector2(0.782999, 1.31626)

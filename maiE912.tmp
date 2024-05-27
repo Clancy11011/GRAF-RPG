@@ -1,8 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=37 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_jk5ca"]
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
-[ext_resource type="PackedScene" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
+[ext_resource type="PackedScene" uid="uid://dgx4w61w4d5pp" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
 [ext_resource type="PackedScene" uid="uid://c6kho3ckutwqa" path="res://UI/DayNightCycle/audio/sound_machine.tscn" id="2_o0f4p"]
 [ext_resource type="Texture2D" uid="uid://ywhr74cr6475" path="res://Tilesets/CobblePathTileSheet3.png" id="3_6lvu6"]
 [ext_resource type="Texture2D" uid="uid://c566xubq302p0" path="res://Assets/UnderwaterLandscape.png" id="3_y31j2"]
@@ -14,11 +14,14 @@
 [ext_resource type="Script" path="res://Scripts/Camera/PlayerCamera.gd" id="7_e0n6t"]
 [ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
 [ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
-[ext_resource type="PackedScene" uid="uid://dntxj8qbof468" path="res://UI/inventory/inventory_ui.tscn" id="12_ayuho"]
+[ext_resource type="PackedScene" uid="uid://dntxj8qbof468" path="res://UI/inventory/ui/inventory_ui.tscn" id="12_ayuho"]
 [ext_resource type="PackedScene" uid="uid://c0altoly0vi4y" path="res://Characters/NPCs/safari_guy.tscn" id="13_6ft45"]
 [ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle.gd" id="14_1cbwh"]
 [ext_resource type="Texture2D" uid="uid://b2801m7m1008j" path="res://UI_Assets/DayNightCycle/daynightcycle-gradient-texture.tres" id="15_8m44u"]
 [ext_resource type="PackedScene" uid="uid://b4mitotcubsj0" path="res://UI/DayNightCycle/daynightcycle_ui.tscn" id="16_fmtir"]
+[ext_resource type="PackedScene" uid="uid://cuy5oujrdbfir" path="res://Items/apple/apple_collectable.tscn" id="18_x1tfd"]
+[ext_resource type="PackedScene" uid="uid://tb2vyt7ph2yf" path="res://Assets/items/ak47/ak47.tscn" id="21_110x6"]
+[ext_resource type="PackedScene" uid="uid://ci3d6om727ghn" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="22_5ll41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
 texture = ExtResource("2_2yl1e")
@@ -349,6 +352,15 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(851989, 6, 0, 851990, 6, 0, 851991, 6, 0, 851992, 6, 0, 851988, 65542, 1, 917524, 65542, 0, 983060, 65542, 0, 1048596, 65542, 0, 1114132, 131078, 1, 1114133, 131078, 0, 1114134, 131078, 0, 1114135, 131078, 0, 1114136, 131078, 0, 1114137, 6, 2, 1048601, 6, 1, 983065, 6, 1, 917529, 6, 1, 851993, 65542, 2, 983062, 131074, 2, 917528, 2, 3)
 
+[node name="apple_collectable" parent="." instance=ExtResource("18_x1tfd")]
+position = Vector2(307, 28)
+
+[node name="apple_collectable3" parent="." instance=ExtResource("18_x1tfd")]
+position = Vector2(308, 144)
+
+[node name="ak47_collectable" parent="." instance=ExtResource("21_110x6")]
+position = Vector2(242, 85)
+
 [node name="PlayerCharacterMain" parent="." instance=ExtResource("2_3esdj")]
 position = Vector2(169, 77)
 move_speed = 65.0
@@ -381,8 +393,22 @@ gradient_texture = ExtResource("15_8m44u")
 
 [node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("16_fmtir")]
 
-[node name="inventory-ui" parent="UIOverlay" instance=ExtResource("12_ayuho")]
-offset_left = -163.0
-offset_top = -118.0
-offset_right = 1757.0
-offset_bottom = 962.0
+[node name="Inventory_UI" parent="UIOverlay" instance=ExtResource("12_ayuho")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -66.0
+offset_right = 96.0
+offset_bottom = 66.0
+
+[node name="inventory_hotbar" parent="UIOverlay" instance=ExtResource("22_5ll41")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
