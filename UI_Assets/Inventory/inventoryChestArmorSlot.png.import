@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r66xmhb50r57"
-path="res://.godot/imported/bamboohotbar.png-9fb03a066294e41e2b32a0b937c75959.ctex"
+uid="uid://cgba1snpuxgek"
+path="res://.godot/imported/inventoryChestArmorSlot.png-063d2388914c4575bcf0a8774d921315.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI_Assets/Inventory/bamboohotbar.png"
-dest_files=["res://.godot/imported/bamboohotbar.png-9fb03a066294e41e2b32a0b937c75959.ctex"]
+source_file="res://UI_Assets/Inventory/inventoryChestArmorSlot.png"
+dest_files=["res://.godot/imported/inventoryChestArmorSlot.png-063d2388914c4575bcf0a8774d921315.ctex"]
 
 [params]
 

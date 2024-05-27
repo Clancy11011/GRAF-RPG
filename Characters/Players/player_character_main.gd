@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var move_speed : float = 100
 @export var start_direction : Vector2 = Vector2(0, 1)
+@export var inv: Inventory
 
 # parameters/Idle/blend_position
 # parameters/Walk/blend_position
@@ -47,6 +48,10 @@ func change_state():
 		state_machine.travel("Idle")
 		
 		
+func collect(item):
+	inv.insert(item)
+	
+
 #func _set_health(value):
 #	super._set_health(value)
 #	if health <= 0 && is_alive:

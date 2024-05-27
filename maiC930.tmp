@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://Scripts/Camera/PlayerCamera.gd" id="7_e0n6t"]
 [ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
 [ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
-[ext_resource type="PackedScene" uid="uid://dntxj8qbof468" path="res://UI/inventory/ui/inventory_ui.tscn" id="12_ayuho"]
+[ext_resource type="PackedScene" uid="uid://dntxj8qbof468" path="res://UI/inventory/inventory-ui.tscn" id="12_ayuho"]
 [ext_resource type="PackedScene" uid="uid://c0altoly0vi4y" path="res://Characters/NPCs/safari_guy.tscn" id="13_6ft45"]
 [ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle.gd" id="14_1cbwh"]
 [ext_resource type="Texture2D" uid="uid://b2801m7m1008j" path="res://UI_Assets/DayNightCycle/daynightcycle-gradient-texture.tres" id="15_8m44u"]
@@ -381,13 +381,8 @@ gradient_texture = ExtResource("15_8m44u")
 
 [node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("16_fmtir")]
 
-[node name="Inventory_UI" parent="UIOverlay" instance=ExtResource("12_ayuho")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -66.0
-offset_right = 96.0
-offset_bottom = 66.0
+[node name="inventory-ui" parent="UIOverlay" instance=ExtResource("12_ayuho")]
+offset_left = -163.0
+offset_top = -118.0
+offset_right = 1757.0
+offset_bottom = 962.0

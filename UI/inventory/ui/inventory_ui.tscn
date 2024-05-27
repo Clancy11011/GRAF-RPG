@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=3 uid="uid://dntxj8qbof468"]
+
+[ext_resource type="Script" path="res://UI/inventory/ui/inventory_ui.gd" id="1_nxo3y"]
+[ext_resource type="Texture2D" uid="uid://dajijvyqp4kay" path="res://UI_Assets/Inventory/inventory.png" id="2_2uyyf"]
+[ext_resource type="PackedScene" uid="uid://dn0do5kdmeyur" path="res://UI/inventory/ui/inventory_ui_slot_dark.tscn" id="3_0m6sb"]
+[ext_resource type="PackedScene" uid="uid://d35rwkxn62myq" path="res://UI/inventory/ui/inventory_ui_slot.tscn" id="4_gbr8e"]
+[ext_resource type="PackedScene" uid="uid://cfyb3eur3pdr" path="res://UI/inventory/ui/inventory_ui_head_armor_slot.tscn" id="5_3c2uo"]
+[ext_resource type="PackedScene" uid="uid://be33l2s3xbl20" path="res://UI/inventory/ui/inventory_ui_chest_armor_slot.tscn" id="6_uxkpu"]
+[ext_resource type="PackedScene" uid="uid://cc6ieaxbfcr8s" path="res://UI/inventory/ui/inventory_ui_pants_armor_slot.tscn" id="7_oaekh"]
+[ext_resource type="Script" path="res://UI/inventory/ui/inventory_ui_chest_armor_slot.gd" id="7_sf0e4"]
+[ext_resource type="PackedScene" uid="uid://d0umecyqqn77v" path="res://UI/inventory/ui/inventory_ui_accessory_slot.tscn" id="8_h75mu"]
+[ext_resource type="Script" path="res://UI/inventory/ui/inventory_ui_pants_armor_slot.gd" id="9_bf57o"]
+[ext_resource type="PackedScene" uid="uid://n7utf2h44x5a" path="res://UI/inventory/ui/inventory_ui_boots_armor_slot.tscn" id="9_fx5y2"]
+
+[node name="Inventory_UI" type="Control"]
+custom_minimum_size = Vector2(192, 132)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1728.0
+offset_bottom = -948.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nxo3y")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 192.0
+offset_bottom = 129.0
+texture = ExtResource("2_2uyyf")
+
+[node name="maininventory" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 64.0
+columns = 9
+
+[node name="inventory_ui_slot_dark" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark2" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark3" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark4" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark5" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark6" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark7" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark8" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="inventory_ui_slot_dark9" parent="NinePatchRect/maininventory" instance=ExtResource("3_0m6sb")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot2" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot3" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot4" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot5" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot6" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot7" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot8" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot9" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot10" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot11" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot12" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot13" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot14" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot15" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot16" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot17" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="Inventory_UI_Slot18" parent="NinePatchRect/maininventory" instance=ExtResource("4_gbr8e")]
+layout_mode = 2
+
+[node name="leftSlots" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 48.0
+offset_bottom = 124.0
+
+[node name="inventory_ui_head_armor_slot" parent="NinePatchRect/leftSlots" instance=ExtResource("5_3c2uo")]
+layout_mode = 2
+
+[node name="inventory_ui_chest_armor_slot" parent="NinePatchRect/leftSlots" instance=ExtResource("6_uxkpu")]
+layout_mode = 2
+script = ExtResource("7_sf0e4")
+
+[node name="inventory_ui_pants_armor_slot" parent="NinePatchRect/leftSlots" instance=ExtResource("7_oaekh")]
+layout_mode = 2
+script = ExtResource("9_bf57o")
+
+[node name="rightSlots" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 68.0
+offset_right = 128.0
+offset_bottom = 124.0
+
+[node name="inventory_ui_accessory_slot" parent="NinePatchRect/rightSlots" instance=ExtResource("8_h75mu")]
+layout_mode = 2
+
+[node name="inventory_ui_accessory_slot2" parent="NinePatchRect/rightSlots" instance=ExtResource("8_h75mu")]
+layout_mode = 2
+
+[node name="inventory_ui_boots_armor_slot" parent="NinePatchRect/rightSlots" instance=ExtResource("9_fx5y2")]
+layout_mode = 2
