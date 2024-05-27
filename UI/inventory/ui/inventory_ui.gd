@@ -1,8 +1,10 @@
 extends Control
 
-@onready var invMain: Inventory = preload("res://Characters/Players/player_inventory.tres")
-@onready var invLeftArmor: Inventory = preload("res://Characters/Players/player_armor_left.tres")
-@onready var invRightArmor: Inventory = preload("res://Characters/Players/player_armor_right.tres")
+
+
+@onready var invMain: Inventory = preload("res://Characters/Players/Inventory/player_inventory.tres")
+@onready var invLeftArmor: Inventory = preload("res://Characters/Players/Inventory/player_armor_left.tres")
+@onready var invRightArmor: Inventory = preload("res://Characters/Players/Inventory/player_armor_right.tres")
 @onready var slotsMain: Array = $NinePatchRect/maininventory.get_children()
 @onready var slotsLeft: Array = $NinePatchRect/leftSlots.get_children()
 @onready var slotsRight: Array = $NinePatchRect/rightSlots.get_children()
