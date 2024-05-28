@@ -1,6 +1,7 @@
 extends Node
 
 var current_scene = null
+signal hotbar_updated
 
 func _ready():
 	
