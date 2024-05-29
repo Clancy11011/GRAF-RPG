@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://b2iojx7sda8qg"]
 
 [ext_resource type="Script" path="res://Characters/Guard/guard.gd" id="1_odw2h"]
-[ext_resource type="Texture2D" uid="uid://bqir2e4cblhm0" path="res://Assets/Guard.png" id="1_u11h3"]
+[ext_resource type="Texture2D" uid="uid://3mfob5gfxp7v" path="res://Tilesets/NPCs/GuardwShadows.png" id="2_wn5hc"]
 [ext_resource type="Script" path="res://Scripts/State/State Machine.gd" id="3_d3mdj"]
 [ext_resource type="Script" path="res://Scripts/GuardScripts/GuardIdle.gd" id="4_uvc55"]
 [ext_resource type="Script" path="res://Scripts/GuardScripts/EnemyFollow.gd" id="5_2di4v"]
@@ -244,7 +244,7 @@ graph_offset = Vector2(73.7904, 5.03993)
 script = ExtResource("1_odw2h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_u11h3")
+texture = ExtResource("2_wn5hc")
 hframes = 4
 vframes = 5
 
