@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://dgx4w61w4d5pp"]
 
 [ext_resource type="Script" path="res://Characters/Players/player_character_main.gd" id="1_1t516"]
-[ext_resource type="Texture2D" uid="uid://5ctchepecaa" path="res://Assets/NewGiraffe_v2wIdle.png" id="2_2qxch"]
+[ext_resource type="Texture2D" uid="uid://ykdsnsddl4h3" path="res://Tilesets/NPCs/GiraffewShadows.png" id="2_8x40j"]
 [ext_resource type="PackedScene" uid="uid://ddwnyk3e8sq7g" path="res://UI/Healthbar/healthbar.tscn" id="3_4qp15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
@@ -246,7 +246,7 @@ start_direction = Vector2(2.08165e-12, -1.1)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 2)
 scale = Vector2(0.190627, 0.217718)
-texture = ExtResource("2_2qxch")
+texture = ExtResource("2_8x40j")
 hframes = 7
 vframes = 4
 frame = 5
