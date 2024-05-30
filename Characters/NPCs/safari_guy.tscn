@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://c0altoly0vi4y"]
 
-[ext_resource type="Texture2D" uid="uid://dwkxdoxl3dus6" path="res://Tilesets/NPCs/SafariGuy.png" id="1_26aqe"]
 [ext_resource type="Script" path="res://Characters/NPCs/safari_guy.gd" id="1_741d4"]
+[ext_resource type="Texture2D" uid="uid://b76j7gtw1yfg0" path="res://Tilesets/NPCs/SafariGuywShadows.png" id="2_bitr1"]
 [ext_resource type="Script" path="res://Characters/NPCs/State Machine.gd" id="3_nuld5"]
 [ext_resource type="PackedScene" uid="uid://dqfhlcomcciyd" path="res://Interaction/Interaction Area/interaction_area.tscn" id="4_t1cwr"]
 
@@ -182,7 +182,7 @@ radius = 28.0713
 script = ExtResource("1_741d4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_26aqe")
+texture = ExtResource("2_bitr1")
 hframes = 5
 vframes = 5
 
