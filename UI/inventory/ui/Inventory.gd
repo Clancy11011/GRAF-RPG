@@ -1,5 +1,5 @@
 extends GridContainer
-class_name Inventory
+
 
 signal hotbar_updated
 
