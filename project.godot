@@ -23,6 +23,8 @@ GuardVariables="*res://Singletons/guard_variables.gd"
 DialogManager="*res://Singletons/DialogManager.gd"
 InteractionManager="*res://Interaction/InteractionManager.tscn"
 ItemData="*res://Autoload/database.gd"
+Inventory="*res://UI/inventory/Inventory.gd"
+InventoryHotbar="*res://UI/inventory/ui/inventory_hotbar.gd"
 
 [display]
 
