@@ -241,6 +241,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 [node name="PlayerCharacterMain" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_1t516")
+move_speed = null
 start_direction = Vector2(2.08165e-12, -1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
