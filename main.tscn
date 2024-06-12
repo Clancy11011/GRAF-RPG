@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://pcq0lh82dakr" path="res://UI/inventory/ui/inventory_ui.tscn" id="22_5c78q"]
 [ext_resource type="PackedScene" uid="uid://ck1vgnc6u3lfd" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="22_5ll41"]
 [ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="24_12qje"]
-[ext_resource type="PackedScene" uid="uid://bqd6u3owxbeww" path="res://bat.tscn" id="26_do3w2"]
+[ext_resource type="PackedScene" path="res://bat.tscn" id="26_do3w2"]
 
 [sub_resource type="Gradient" id="Gradient_vn7mg"]
 
@@ -2332,10 +2332,10 @@ gradient_texture = ExtResource("15_8m44u")
 [node name="UIOverlay" type="CanvasLayer" parent="."]
 
 [node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("16_fmtir")]
-offset_left = -4.0
-offset_top = 10.0
-offset_right = -4.0
-offset_bottom = 10.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
 
 [node name="Inventory_UI" parent="UIOverlay" instance=ExtResource("22_5c78q")]
 anchors_preset = 8
