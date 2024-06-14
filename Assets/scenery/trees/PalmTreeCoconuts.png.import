@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coh5k7yv3fq5x"
-path="res://.godot/imported/stone1.png-1bfe6208a01e9547a5f8c1cf3425f25a.ctex"
+uid="uid://b81n8f5yaih8h"
+path="res://.godot/imported/PalmTreeCoconuts.png-29f9250eebef198f56dbb0c13abae937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/scenery/stone1.png"
-dest_files=["res://.godot/imported/stone1.png-1bfe6208a01e9547a5f8c1cf3425f25a.ctex"]
+source_file="res://Assets/scenery/trees/PalmTreeCoconuts.png"
+dest_files=["res://.godot/imported/PalmTreeCoconuts.png-29f9250eebef198f56dbb0c13abae937.ctex"]
 
 [params]
 

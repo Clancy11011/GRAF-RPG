@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbbrtdexqwycv"
-path="res://.godot/imported/stone4.png-3e9a841414af02229741af2e9b006113.ctex"
+uid="uid://krh3gkjn356q"
+path="res://.godot/imported/flowers.png-4c80f77fb75d62d00b72ab4969d4b974.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/scenery/stone4.png"
-dest_files=["res://.godot/imported/stone4.png-3e9a841414af02229741af2e9b006113.ctex"]
+source_file="res://Assets/scenery/flowers/flowers.png"
+dest_files=["res://.godot/imported/flowers.png-4c80f77fb75d62d00b72ab4969d4b974.ctex"]
 
 [params]
 
