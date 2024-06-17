@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=65 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_jk5ca"]
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
@@ -35,8 +35,9 @@
 [ext_resource type="PackedScene" uid="uid://pcq0lh82dakr" path="res://UI/inventory/ui/inventory_ui.tscn" id="22_5c78q"]
 [ext_resource type="PackedScene" uid="uid://ck1vgnc6u3lfd" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="22_5ll41"]
 [ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="24_12qje"]
-[ext_resource type="PackedScene" uid="uid://bqd6u3owxbeww" path="res://bat.tscn" id="26_do3w2"]
+[ext_resource type="PackedScene" path="res://bat.tscn" id="26_do3w2"]
 [ext_resource type="Script" path="res://UI/inventory/ui/inventory_hotbar_ui.gd" id="26_omppy"]
+[ext_resource type="PackedScene" uid="uid://bkfdkxqid1vgm" path="res://UI/Casino/Slots/slot_machine.tscn" id="38_sycie"]
 
 [sub_resource type="Gradient" id="Gradient_vn7mg"]
 
@@ -2577,3 +2578,6 @@ texture = ExtResource("24_12qje")
 
 [node name="Bat" parent="." instance=ExtResource("26_do3w2")]
 position = Vector2(517, -53)
+
+[node name="slot_machine" parent="." instance=ExtResource("38_sycie")]
+position = Vector2(219, 40)

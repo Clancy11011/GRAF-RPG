@@ -23,6 +23,7 @@ GuardVariables="*res://Singletons/guard_variables.gd"
 DialogManager="*res://Singletons/DialogManager.gd"
 InteractionManager="*res://Interaction/InteractionManager.tscn"
 ItemData="*res://Autoload/database.gd"
+SignalBank="*res://Autoload/signalbank.gd"
 
 [display]
 
