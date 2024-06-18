@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://dgx4w61w4d5pp"]
+[gd_scene load_steps=30 format=3 uid="uid://dgx4w61w4d5pp"]
 
 [ext_resource type="Script" path="res://Characters/Players/player_character_main.gd" id="1_1t516"]
 [ext_resource type="Texture2D" uid="uid://ykdsnsddl4h3" path="res://Tilesets/NPCs/GiraffewShadows.png" id="2_8x40j"]
 [ext_resource type="PackedScene" uid="uid://ddwnyk3e8sq7g" path="res://UI/Healthbar/healthbar.tscn" id="3_4qp15"]
+[ext_resource type="PackedScene" uid="uid://c4di7ptsyq3b4" path="res://pistol_equipped.tscn" id="4_nkflq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
 size = Vector2(12, 7.26859)
@@ -277,3 +278,7 @@ offset_top = 57.0
 offset_right = 119.0
 offset_bottom = 59.0
 scale = Vector2(0.782999, 1.31626)
+
+[node name="Gun" parent="." instance=ExtResource("4_nkflq")]
+position = Vector2(5, 8)
+scale = Vector2(0.404354, 0.425849)
