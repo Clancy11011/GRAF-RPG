@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b6m4ssexmagbi" path="res://UI/Casino/Slots/reel.tscn" id="1_em2ls"]
 [ext_resource type="Script" path="res://UI/Casino/Slots/slot_machine_ui.gd" id="1_vmooi"]
-[ext_resource type="Texture2D" uid="uid://c7l21jdyd1l0g" path="res://Assets/casino/slots/Imported piskel-1.png.png" id="2_qtbut"]
+[ext_resource type="Texture2D" uid="uid://cwuih6t4ta7pc" path="res://Assets/casino/slots/slotUi.png" id="2_5c3vt"]
 
 [node name="slot_machine_ui" type="Control"]
 layout_mode = 3
@@ -27,7 +27,7 @@ offset_right = 104.0
 offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qtbut")
+texture = ExtResource("2_5c3vt")
 
 [node name="reelcontainer4" type="Control" parent="."]
 layout_mode = 1
@@ -86,32 +86,62 @@ scale = Vector2(1, 1)
 reelId = 3
 
 [node name="spinButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -45.0
-offset_top = -98.0
-offset_right = 27.0
-offset_bottom = -67.0
+offset_left = 87.0
+offset_top = -55.0
+offset_right = 105.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "SPIN ME"
 
-[node name="betAmount" type="SpinBox" parent="."]
+[node name="decreaseBetButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -43.0
-offset_top = 32.0
-offset_right = 40.0625
-offset_bottom = 63.0
+offset_left = -54.0
+offset_top = -52.0
+offset_right = -41.0
+offset_bottom = -39.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="increaseBetButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -52.0
+offset_right = 35.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 922.0
+offset_top = 476.0
+offset_right = 973.0
+offset_bottom = 516.0
+
+[node name="betAmount" type="Label" parent="PanelContainer"]
+z_as_relative = false
+layout_mode = 2
+text = "$TESTf"
 
 [connection signal="button_up" from="spinButton" to="." method="_on_spin_button_up"]
+[connection signal="button_up" from="decreaseBetButton" to="." method="_on_decrease_bet_button_up"]
+[connection signal="button_up" from="increaseBetButton" to="." method="_on_increase_bet_button_up"]

@@ -3,8 +3,6 @@ class_name Player
 
 @export var move_speed : float = 100
 @export var start_direction : Vector2 = Vector2(0, 1)
-#@export var inv: Inventory
-
 
 # parameters/Idle/blend_position
 # parameters/Walk/blend_position
@@ -18,6 +16,8 @@ class_name Player
 var player : CharacterBody2D
 
 func _ready():
+	SignalBank.toggleUIVisibility.connect(Callable(self,"toggle_healthbar_visibility"))
+	
 	var starting_health = 100
 	update_animation_param(start_direction)
 	player = get_tree().get_first_node_in_group("Player")
@@ -53,10 +53,10 @@ func change_state():
 		state_machine.travel("Idle")
 		
 
-	
 
-	
-	
+func toggle_healthbar_visibility():
+	healthbar.visible = !visible
+
 
 #func _set_health(value):
 #	super._set_health(value)
