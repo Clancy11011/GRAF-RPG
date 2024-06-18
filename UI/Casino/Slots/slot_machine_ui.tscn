@@ -1,8 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnlkksx2t41ao"]
+[gd_scene load_steps=8 format=3 uid="uid://cnlkksx2t41ao"]
 
 [ext_resource type="PackedScene" uid="uid://b6m4ssexmagbi" path="res://UI/Casino/Slots/reel.tscn" id="1_em2ls"]
 [ext_resource type="Script" path="res://UI/Casino/Slots/slot_machine_ui.gd" id="1_vmooi"]
-[ext_resource type="Texture2D" path="res://Assets/casino/slots/slotUi.png" id="2_5c3vt"]
+[ext_resource type="Texture2D" uid="uid://2h7xds4jkteq" path="res://Assets/casino/slots/slotSpriteSheet.png" id="2_x50wt"]
+[ext_resource type="AudioStream" uid="uid://b42o8bh41hes8" path="res://Assets/casino/slots/sounds/spinSound.mp3" id="4_j0np1"]
+
+[sub_resource type="Animation" id="Animation_3uunq"]
+resource_name = "spin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_784kr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l8s5y"]
+_data = {
+"RESET": SubResource("Animation_784kr"),
+"spin": SubResource("Animation_3uunq")
+}
 
 [node name="slot_machine_ui" type="Control"]
 layout_mode = 3
@@ -13,21 +50,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vmooi")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-custom_minimum_size = Vector2(208, 132)
+[node name="spriteContainer" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -104.0
-offset_top = -66.0
-offset_right = 104.0
-offset_bottom = 66.0
+offset_left = -108.0
+offset_top = -69.0
+offset_right = -68.0
+offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_5c3vt")
+
+[node name="Sprite2D" type="Sprite2D" parent="spriteContainer"]
+position = Vector2(108, 69)
+texture = ExtResource("2_x50wt")
+hframes = 2
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="spriteContainer/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_l8s5y")
+}
 
 [node name="reelcontainer4" type="Control" parent="."]
 layout_mode = 1
@@ -165,6 +211,9 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 text = "$"
+
+[node name="spinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_j0np1")
 
 [connection signal="button_up" from="spinButton" to="." method="_on_spin_button_up"]
 [connection signal="button_up" from="decreaseBetButton" to="." method="_on_decrease_bet_button_up"]

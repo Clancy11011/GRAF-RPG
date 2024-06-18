@@ -20,7 +20,6 @@ var rollBackDuration = 0.5
 
 func _ready():
 	SignalBank.startRoll.connect(Callable(self, "_startRoll"))
-	#upperReel.position.y = -1000
 	upperReel.position.y = -250
 	lowerReel.position.y = 0
 
@@ -28,7 +27,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_released("ui_accept"):
 		_startRoll(reelId,5)
-		print("rollMe")
+		#print("rollMe")
 	
 	match state:
 		ROLLBACK:
@@ -52,14 +51,11 @@ func _process(delta):
 
 
 func _startRoll(reelNumber,dur):
-	print("starting roll for ", reelNumber)
 	if reelNumber!= reelId : return
-	
 	upperReel.position.y = -250
 	lowerReel.position.y = 0
 	state = ROLLBACK
 	rollDuration = dur
-	print(reelId,reelNumber,dur)
 	rollBackDuration = 0.25
 	
 
@@ -92,9 +88,8 @@ func _stopRoll():
 	finalSlot.z_index = 1
 	anotherSlot.z_index = 0
 	TWN.tween_property(finalSlot,"position:y",finalPos,dur)
-	#TWN.tween_property(anotherSlot,"position:y",finalPos+1000,dur)
 	TWN.tween_property(anotherSlot,"position:y",finalPos+250,dur)
 	await TWN.finished
-	print("Reel ID",reelId," reel Image ", finalSlot.name ," POS : ",finalPos, " RNJESUS :",rng)
+	#print("Reel ID",reelId," reel Image ", finalSlot.name ," POS : ",finalPos, " RNJESUS :",rng)
 	SignalBank.rollFinished.emit(reelId, rng)
 
