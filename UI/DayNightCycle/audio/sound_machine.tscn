@@ -23,3 +23,5 @@ volume_db = -5.0
 [node name="NightSoundscape" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ryniw")
 volume_db = -20.0
+
+[node name="spinSlot" type="AudioStreamPlayer" parent="."]

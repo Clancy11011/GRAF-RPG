@@ -7,6 +7,7 @@ extends Node
 @onready var night_jingle: AudioStreamPlayer = $NightJingle
 @onready var day_soundscape: AudioStreamPlayer = $DaySoundscape
 @onready var night_soundscape: AudioStreamPlayer = $NightSoundscape
+@onready var spinSlot: AudioStreamPlayer = $spinSlot
 
 
 func set_daytime(day: int, hour: int, minute: int) -> void:
@@ -28,3 +29,7 @@ func set_daytime(day: int, hour: int, minute: int) -> void:
 		night_jingle.play()
 		day_soundscape.stop()
 		night_soundscape.play()
+
+
+func playSpinSlotNoise():
+	spinSlot.play()

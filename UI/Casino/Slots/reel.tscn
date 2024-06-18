@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b6m4ssexmagbi"]
 
 [ext_resource type="Script" path="res://UI/Casino/Slots/reel.gd" id="1_pvg02"]
-[ext_resource type="Texture2D" path="res://Assets/casino/slots/finalReelImg.png" id="3_6i1ya"]
+[ext_resource type="Texture2D" uid="uid://jlyuixh3xjw1" path="res://Assets/casino/slots/finalReelImg.png" id="3_6i1ya"]
 [ext_resource type="Texture2D" uid="uid://0h0np7u1g6tp" path="res://Assets/casino/slots/resizedFrame.png" id="4_e5qne"]
 [ext_resource type="Texture2D" uid="uid://cmr7t73rslhh8" path="res://Assets/casino/slots/resizedMask.png" id="5_or5ld"]
 
