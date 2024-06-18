@@ -36,7 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://pcq0lh82dakr" path="res://UI/inventory/ui/inventory_ui.tscn" id="22_5c78q"]
 [ext_resource type="PackedScene" uid="uid://ck1vgnc6u3lfd" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="22_5ll41"]
 [ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="24_12qje"]
-[ext_resource type="PackedScene" uid="uid://bqd6u3owxbeww" path="res://bat.tscn" id="26_do3w2"]
+[ext_resource type="PackedScene" path="res://bat.tscn" id="26_do3w2"]
 [ext_resource type="Script" path="res://UI/inventory/ui/inventory_hotbar_ui.gd" id="26_omppy"]
 [ext_resource type="PackedScene" uid="uid://bkfdkxqid1vgm" path="res://UI/Casino/Slots/slot_machine.tscn" id="38_sycie"]
 

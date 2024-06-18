@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://UI/Casino/Slots/slot_machine.gd" id="1_hhrf3"]
 [ext_resource type="PackedScene" uid="uid://dqfhlcomcciyd" path="res://Interaction/Interaction Area/interaction_area.tscn" id="2_3wkjd"]
-[ext_resource type="Texture2D" uid="uid://butbts5loq6x4" path="res://Assets/casino/slots/slotMachine.png" id="2_r8i0b"]
+[ext_resource type="Texture2D" path="res://Assets/casino/slots/slotMachine.png" id="2_r8i0b"]
 [ext_resource type="PackedScene" uid="uid://cnlkksx2t41ao" path="res://UI/Casino/Slots/slot_machine_ui.tscn" id="4_ft1up"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5on8"]

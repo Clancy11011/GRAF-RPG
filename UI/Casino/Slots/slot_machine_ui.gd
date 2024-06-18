@@ -3,6 +3,9 @@ extends Control
 
 var betSize : int = 0
 
+@onready var betLabel = $betAmount
+@onready var resultLabel = $result
+
 var reelResult1
 var reelResult2
 var reelResult3
@@ -17,6 +20,7 @@ var winningMultiplier = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#visible = false
+	betLabel.text = "$" + str(betSize)
 	SignalBank.rollFinished.connect(Callable(self,"_receiveNumber"))
 	
 	
@@ -52,6 +56,7 @@ func _calculateWinning():
 		winningMultiplier = -1
 	betResult = betValue * winningMultiplier
 	print(str(betResult))
+	resultLabel.text = str(betResult)
 	#if betResult>0:
 	#	$Result.text = "+ "+str(betResult)
 	#else:
@@ -67,9 +72,12 @@ func _on_spin_button_up():
 
 func _on_increase_bet_button_up():
 	print("bet changed: ", betSize)
-	betSize += 10
+	betSize += 10 
+	betLabel.text = "$" + str(betSize) 
 
 
 func _on_decrease_bet_button_up():
 	print("bet changed: ", betSize)
-	betSize -= 10
+	if(betSize > 0):
+		betSize -= 10
+	betLabel.text = "$" + str(betSize) 
