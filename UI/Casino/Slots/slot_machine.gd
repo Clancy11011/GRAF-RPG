@@ -20,9 +20,14 @@ func _process(delta):
 	pass
 
 
+
+
+
 func _on_interact():
 	if(slot_machine_ui.visible):
 		slot_machine_ui.visible = false
+		SignalBank.toggleUIVisibility.emit()
 	else:
 		slot_machine_ui.visible = true
+		SignalBank.toggleUIVisibility.emit()
 	

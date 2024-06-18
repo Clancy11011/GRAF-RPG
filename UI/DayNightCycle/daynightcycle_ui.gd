@@ -7,6 +7,9 @@ extends Control
 @onready var time_label: Label = %TimeLabel
 @onready var arrow: TextureRect = %Arrow
 
+func _ready():
+	SignalBank.toggleUIVisibility.connect(Callable(self, "toggle_visibility"))
+	
 
 func set_daytime(day: int, hour: int, minute: int) -> void:
 	day_label.text = "Day " + str(day + 1)
@@ -44,3 +47,8 @@ func _am_pm(hour:int) -> String:
 
 func _remap_rangef(input:float, minInput:float, maxInput:float, minOutput:float, maxOutput:float):
 	return float(input - minInput) / float(maxInput - minInput) * float(maxOutput - minOutput) + minOutput
+	
+	
+	
+func toggle_visibility():
+	visible = !visible

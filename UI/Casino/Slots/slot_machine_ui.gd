@@ -1,6 +1,11 @@
 extends Control
 #class_name slot_machine_ui
 
+var betSize : int = 0
+
+@onready var betLabel = $betAmount
+@onready var resultLabel = $result
+
 var reelResult1
 var reelResult2
 var reelResult3
@@ -15,8 +20,8 @@ var winningMultiplier = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#visible = false
+	betLabel.text = "$" + str(betSize)
 	SignalBank.rollFinished.connect(Callable(self,"_receiveNumber"))
-	pass # Replace with function body.
 	
 	
 func _receiveNumber(reelID,rngResult):
@@ -37,8 +42,11 @@ func _receiveNumber(reelID,rngResult):
 
 
 func _calculateWinning():
-	betValue = int($betAmount.value)
-	
+	var betText = $betAmount.text
+
+	# Remove the dollar sign and convert the remaining string to an integer
+	var betValue = int(betText.substr(1, betText.length() - 1))
+	print("winning bet value: ", betValue)
 	
 	if reelResult1 == reelResult2 || reelResult2 == reelResult3:
 		winningMultiplier = 5
@@ -48,6 +56,7 @@ func _calculateWinning():
 		winningMultiplier = -1
 	betResult = betValue * winningMultiplier
 	print(str(betResult))
+	resultLabel.text = str(betResult)
 	#if betResult>0:
 	#	$Result.text = "+ "+str(betResult)
 	#else:
@@ -55,9 +64,20 @@ func _calculateWinning():
 	
 
 func _on_spin_button_up():
-	print("spinning slot")
 	SignalBank.startRoll.emit(1,2)
 	SignalBank.startRoll.emit(2,2.5)
 	SignalBank.startRoll.emit(3,3)
-	pass # Replace with function body.
 
+
+
+func _on_increase_bet_button_up():
+	print("bet changed: ", betSize)
+	betSize += 10 
+	betLabel.text = "$" + str(betSize) 
+
+
+func _on_decrease_bet_button_up():
+	print("bet changed: ", betSize)
+	if(betSize > 0):
+		betSize -= 10
+	betLabel.text = "$" + str(betSize) 
