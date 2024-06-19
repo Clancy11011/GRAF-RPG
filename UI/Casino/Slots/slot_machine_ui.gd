@@ -8,6 +8,9 @@ var betSize : int = 0
 @onready var spinAnimation = $spriteContainer/Sprite2D/AnimationPlayer
 @onready var spinSound = $spinSound
 
+var animation_time = 1.0  # Adjust this for desired animation duration
+var fade_out_delay = 0.5  # Adjust this to delay the fade-out
+
 var reelResult1
 var reelResult2
 var reelResult3
@@ -62,6 +65,7 @@ func _calculateWinning():
 		winningMultiplier = 1  
 	elif reelResult1 != reelResult2 && reelResult2 != reelResult3 && reelResult1 != reelResult3:
 		winningMultiplier = 0
+
 
 	betResult = betValue * winningMultiplier
 	print(str(betResult))

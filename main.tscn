@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=61 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_jk5ca"]
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://djv52mavbehie" path="res://Assets/Bush.png" id="5_ebcau"]
 [ext_resource type="Texture2D" uid="uid://b752brm8qfqvh" path="res://Assets/SmallTree.png" id="6_rtwia"]
 [ext_resource type="Texture2D" uid="uid://bvewl6kc6gxax" path="res://Assets/WaterEdgeTiles.png" id="7_6wtpi"]
-[ext_resource type="Script" path="res://Scripts/Camera/PlayerCamera.gd" id="7_e0n6t"]
 [ext_resource type="Texture2D" uid="uid://bwg7funfa3es4" path="res://Assets/wood flooring.png" id="7_s7xm6"]
 [ext_resource type="Texture2D" uid="uid://dacu3a21xyhff" path="res://Assets/Texturesv01.png" id="8_ooelq"]
 [ext_resource type="Texture2D" uid="uid://bh6nr1hka1hpa" path="res://Assets/scenery/trees/PalmTree.png" id="9_8mlll"]
@@ -26,19 +25,14 @@
 [ext_resource type="Texture2D" uid="uid://bqk5xb1l3bcs6" path="res://Assets/Tree.png" id="13_l26uc"]
 [ext_resource type="Texture2D" uid="uid://dtds8n4rdxcnk" path="res://Assets/scenery/rocks/rocks1.png" id="13_mmv1n"]
 [ext_resource type="Texture2D" uid="uid://csxde0f036s6a" path="res://Assets/BrickWall.png" id="13_unb6t"]
-[ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle.gd" id="14_1cbwh"]
-[ext_resource type="Texture2D" uid="uid://b2801m7m1008j" path="res://UI_Assets/DayNightCycle/daynightcycle-gradient-texture.tres" id="15_8m44u"]
 [ext_resource type="Texture2D" uid="uid://krh3gkjn356q" path="res://Assets/scenery/flowers/flowers.png" id="15_vjs2v"]
-[ext_resource type="PackedScene" uid="uid://b4mitotcubsj0" path="res://UI/DayNightCycle/daynightcycle_ui.tscn" id="16_fmtir"]
 [ext_resource type="Texture2D" uid="uid://duh3fwq3s1fb8" path="res://Assets/scenery/trees/PalmTree2.png" id="16_xtoc0"]
 [ext_resource type="PackedScene" uid="uid://depvls5ox37xs" path="res://monkey_enemy.tscn" id="17_qo0sa"]
 [ext_resource type="PackedScene" uid="uid://cdodcwognee1u" path="res://Items/abstract_item.tscn" id="20_32880"]
-[ext_resource type="PackedScene" uid="uid://pcq0lh82dakr" path="res://UI/inventory/ui/inventory_ui.tscn" id="22_5c78q"]
-[ext_resource type="PackedScene" uid="uid://ck1vgnc6u3lfd" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="22_5ll41"]
 [ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="24_12qje"]
-[ext_resource type="PackedScene" uid="uid://bqd6u3owxbeww" path="res://bat.tscn" id="26_do3w2"]
-[ext_resource type="Script" path="res://UI/inventory/ui/inventory_hotbar_ui.gd" id="26_omppy"]
+[ext_resource type="PackedScene" path="res://bat.tscn" id="26_do3w2"]
 [ext_resource type="PackedScene" uid="uid://bkfdkxqid1vgm" path="res://UI/Casino/Slots/slot_machine.tscn" id="38_sycie"]
+[ext_resource type="PackedScene" uid="uid://dk8hpkokbs1cy" path="res://Buildings/casino/casino_building.tscn" id="40_ycqwi"]
 
 [sub_resource type="Gradient" id="Gradient_vn7mg"]
 
@@ -2812,12 +2806,6 @@ position = Vector2(169, 77)
 move_speed = 65.0
 start_direction = Vector2(2.08165e-12, 1)
 
-[node name="PlayerCamera" type="Camera2D" parent="PlayerCharacterMain" node_paths=PackedStringArray("tilemap")]
-limit_smoothed = true
-position_smoothing_enabled = true
-script = ExtResource("7_e0n6t")
-tilemap = NodePath("../../TileMap")
-
 [node name="SpriteWaterv013" type="Sprite2D" parent="."]
 z_index = -7
 material = SubResource("ShaderMaterial_mep7n")
@@ -2827,44 +2815,6 @@ texture = ExtResource("10_ye3o3")
 
 [node name="SafariGuy" parent="." instance=ExtResource("13_6ft45")]
 position = Vector2(408, 96)
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-script = ExtResource("14_1cbwh")
-gradient_texture = ExtResource("15_8m44u")
-
-[node name="UIOverlay" type="CanvasLayer" parent="."]
-
-[node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("16_fmtir")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="Inventory_UI" parent="UIOverlay" instance=ExtResource("22_5c78q")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = 11.0
-offset_right = -88.0
-offset_bottom = 11.0
-
-[node name="inventory_hotbar_ui" parent="UIOverlay" instance=ExtResource("22_5ll41")]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -96.0
-offset_top = -33.0
-offset_right = 96.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 0
-script = ExtResource("26_omppy")
 
 [node name="AbstractItem" parent="." instance=ExtResource("20_32880")]
 position = Vector2(309, 30)
@@ -2878,11 +2828,15 @@ position = Vector2(386, 167)
 ID = "2"
 
 [node name="Thehut" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1368, 121)
 texture = ExtResource("24_12qje")
 
 [node name="Bat" parent="." instance=ExtResource("26_do3w2")]
-position = Vector2(293, -62)
+position = Vector2(961, -41)
 
 [node name="slot_machine" parent="." instance=ExtResource("38_sycie")]
 position = Vector2(219, 40)
+
+[node name="casino_building" parent="." instance=ExtResource("40_ycqwi")]
+position = Vector2(487, 26)

@@ -1,9 +1,16 @@
-[gd_scene load_steps=30 format=3 uid="uid://dgx4w61w4d5pp"]
+[gd_scene load_steps=37 format=3 uid="uid://dgx4w61w4d5pp"]
 
 [ext_resource type="Script" path="res://Characters/Players/player_character_main.gd" id="1_1t516"]
 [ext_resource type="Texture2D" uid="uid://ykdsnsddl4h3" path="res://Tilesets/NPCs/GiraffewShadows.png" id="2_8x40j"]
 [ext_resource type="PackedScene" uid="uid://ddwnyk3e8sq7g" path="res://UI/Healthbar/healthbar.tscn" id="3_4qp15"]
+[ext_resource type="Script" path="res://Scripts/Camera/PlayerCamera.gd" id="3_b3a15"]
 [ext_resource type="PackedScene" uid="uid://c4di7ptsyq3b4" path="res://pistol_equipped.tscn" id="4_nkflq"]
+[ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle.gd" id="5_2q337"]
+[ext_resource type="Texture2D" uid="uid://b2801m7m1008j" path="res://UI_Assets/DayNightCycle/daynightcycle-gradient-texture.tres" id="6_4hv7c"]
+[ext_resource type="PackedScene" uid="uid://b4mitotcubsj0" path="res://UI/DayNightCycle/daynightcycle_ui.tscn" id="7_5211u"]
+[ext_resource type="PackedScene" uid="uid://pcq0lh82dakr" path="res://UI/inventory/ui/inventory_ui.tscn" id="8_ghssg"]
+[ext_resource type="PackedScene" uid="uid://ck1vgnc6u3lfd" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="9_at6ns"]
+[ext_resource type="Script" path="res://UI/inventory/ui/inventory_hotbar_ui.gd" id="10_0o03v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
 size = Vector2(12, 7.26859)
@@ -253,6 +260,11 @@ hframes = 7
 vframes = 4
 frame = 5
 
+[node name="PlayerCamera" type="Camera2D" parent="."]
+limit_smoothed = true
+position_smoothing_enabled = true
+script = ExtResource("3_b3a15")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8.01002)
 scale = Vector2(1, 2.20401)
@@ -282,3 +294,41 @@ scale = Vector2(0.782999, 1.31626)
 [node name="Gun" parent="." instance=ExtResource("4_nkflq")]
 position = Vector2(5, 8)
 scale = Vector2(0.404354, 0.425849)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("5_2q337")
+gradient_texture = ExtResource("6_4hv7c")
+
+[node name="UIOverlay" type="CanvasLayer" parent="."]
+
+[node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("7_5211u")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Inventory_UI" parent="UIOverlay" instance=ExtResource("8_ghssg")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 11.0
+offset_right = -88.0
+offset_bottom = 11.0
+
+[node name="inventory_hotbar_ui" parent="UIOverlay" instance=ExtResource("9_at6ns")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -33.0
+offset_right = 96.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("10_0o03v")
