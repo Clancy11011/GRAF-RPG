@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://depvls5ox37xs" path="res://monkey_enemy.tscn" id="17_qo0sa"]
 [ext_resource type="PackedScene" uid="uid://cdodcwognee1u" path="res://Items/abstract_item.tscn" id="20_32880"]
 [ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="24_12qje"]
-[ext_resource type="PackedScene" path="res://bat.tscn" id="26_do3w2"]
+[ext_resource type="PackedScene" uid="uid://bqd6u3owxbeww" path="res://bat.tscn" id="26_do3w2"]
 [ext_resource type="PackedScene" uid="uid://bkfdkxqid1vgm" path="res://UI/Casino/Slots/slot_machine.tscn" id="38_sycie"]
 [ext_resource type="PackedScene" uid="uid://dk8hpkokbs1cy" path="res://Buildings/casino/casino_building.tscn" id="40_ycqwi"]
 
