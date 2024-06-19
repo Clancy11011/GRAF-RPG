@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name BatEnemy
 
+var health = 5
+
 @export var move_speed : float = 10
 @export var start_direction : Vector2 = Vector2(0, 1)
 
@@ -29,3 +31,10 @@ func change_state():
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
+
+
+func take_damage():
+	health -= 1
+	
+	if health == 0:
+		queue_free()
