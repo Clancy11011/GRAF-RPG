@@ -1,7 +1,13 @@
-[gd_scene load_steps=28 format=3 uid="uid://bx4qimk516454"]
+[gd_scene load_steps=34 format=3 uid="uid://bx4qimk516454"]
 
 [ext_resource type="Script" path="res://Characters/Players/player_character.gd" id="1_2orgs"]
 [ext_resource type="Texture2D" uid="uid://fgrhlc66oild" path="res://Assets/Walking Animations v6.png" id="2_uo3af"]
+[ext_resource type="PackedScene" uid="uid://b4mitotcubsj0" path="res://UI/DayNightCycle/daynightcycle_ui.tscn" id="3_x7jtm"]
+[ext_resource type="Script" path="res://UI/DayNightCycle/daynightcycle.gd" id="4_fl30w"]
+[ext_resource type="PackedScene" uid="uid://pcq0lh82dakr" path="res://UI/inventory/ui/inventory_ui.tscn" id="4_g535i"]
+[ext_resource type="Texture2D" uid="uid://b2801m7m1008j" path="res://UI_Assets/DayNightCycle/daynightcycle-gradient-texture.tres" id="5_5oi4m"]
+[ext_resource type="PackedScene" uid="uid://ck1vgnc6u3lfd" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="5_y876a"]
+[ext_resource type="Script" path="res://UI/inventory/ui/inventory_hotbar_ui.gd" id="6_prg5h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n74j"]
 size = Vector2(88, 128)
@@ -262,3 +268,43 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/Idle/blend_position = Vector2(0.000529885, 1.07603)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+script = ExtResource("4_fl30w")
+gradient_texture = ExtResource("5_5oi4m")
+
+[node name="UIOverlay" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="DayNightCycleUI" parent="UIOverlay" instance=ExtResource("3_x7jtm")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Inventory_UI" parent="UIOverlay" instance=ExtResource("4_g535i")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 11.0
+offset_right = -88.0
+offset_bottom = 11.0
+
+[node name="inventory_hotbar_ui" parent="UIOverlay" instance=ExtResource("5_y876a")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -33.0
+offset_right = 96.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("6_prg5h")

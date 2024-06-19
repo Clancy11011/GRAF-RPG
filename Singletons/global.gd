@@ -1,6 +1,10 @@
 extends Node
 
 var current_scene = null
+
+var previousScene: String = ""
+var playerPostion: Vector2 = Vector2.ZERO
+
 signal hotbar_updated
 
 func _ready():

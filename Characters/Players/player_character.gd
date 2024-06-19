@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 # parameters/Idle/blend_position
 
-@onready var animation_tree = $AnimationTree
+@onready var animation_tree = $AnimationTrees
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 

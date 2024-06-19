@@ -32,4 +32,5 @@ shape = SubResource("CircleShape2D_u33g0")
 layer = 0
 
 [node name="slot_machine_ui" parent="UIOverlay" instance=ExtResource("4_ft1up")]
+visible = false
 z_as_relative = false

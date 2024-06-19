@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk8hpkokbs1cy"]
+
+[ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="1_0fd2f"]
+[ext_resource type="Script" path="res://Buildings/casino/casino_building.gd" id="1_cgu2o"]
+[ext_resource type="PackedScene" uid="uid://dqfhlcomcciyd" path="res://Interaction/Interaction Area/interaction_area.tscn" id="3_qvb0p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2l5ea"]
+radius = 31.0644
+
+[node name="casino_building" type="Node2D"]
+script = ExtResource("1_cgu2o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0fd2f")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_qvb0p")]
+action_name = "enter"
+
+[node name="entrance" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 34)
+shape = SubResource("CircleShape2D_2l5ea")
