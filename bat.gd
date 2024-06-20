@@ -35,6 +35,7 @@ func change_state():
 
 func take_damage():
 	health -= 1
+	$AnimationPlayer.play("hurt")
 	
 	if health == 0:
 		queue_free()
