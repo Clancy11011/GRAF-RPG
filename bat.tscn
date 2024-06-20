@@ -1,7 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://bqd6u3owxbeww"]
+[gd_scene load_steps=28 format=3 uid="uid://bqd6u3owxbeww"]
 
 [ext_resource type="Script" path="res://bat.gd" id="1_qyyu4"]
-[ext_resource type="Texture2D" uid="uid://76t2rfcey1q0" path="res://Assets/Bat.png" id="1_wbsjc"]
+[ext_resource type="Texture2D" uid="uid://d3s480qwskp15" path="res://Bat.png" id="2_xfpj0"]
 [ext_resource type="Script" path="res://StateMachine.gd" id="3_c1c50"]
 [ext_resource type="Script" path="res://Idle.gd" id="4_ravaj"]
 [ext_resource type="Script" path="res://Walk.gd" id="5_u4ufb"]
@@ -92,13 +92,30 @@ tracks/0/keys = {
 "values": [0, 1, 2]
 }
 
+[sub_resource type="Animation" id="Animation_jnkua"]
+resource_name = "hurt"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xg0a4"]
 _data = {
 "RESET": SubResource("Animation_shq7e"),
 "back_left": SubResource("Animation_g2k8o"),
 "back_right": SubResource("Animation_kw6jf"),
 "front_left": SubResource("Animation_gx1bn"),
-"front_right": SubResource("Animation_3j62e")
+"front_right": SubResource("Animation_3j62e"),
+"hurt": SubResource("Animation_jnkua")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q4724"]
@@ -172,7 +189,7 @@ graph_offset = Vector2(75.5248, -26.28)
 script = ExtResource("1_qyyu4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wbsjc")
+texture = ExtResource("2_xfpj0")
 hframes = 5
 vframes = 3
 
