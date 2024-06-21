@@ -33,11 +33,8 @@ func _physics_process(_delta):
 	)
 	
 	update_animation_param(input_direction)
-	
 	velocity = input_direction * move_speed
-	
 	move_and_slide()
-	
 	change_state()
 
 func update_animation_param(move_input : Vector2):

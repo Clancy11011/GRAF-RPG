@@ -2,8 +2,10 @@ extends Node2D
 
 @export var newScenePath: String
 @onready var interaction_area: InteractionArea = $InteractionArea
+@onready var idleAnimation = $Sprite2D/AnimationPlayer
 
 func _ready():
+	idleAnimation.play("idle")
 	interaction_area.interact = Callable(self, "_on_enter")
 
 

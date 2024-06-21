@@ -1,15 +1,12 @@
-extends GridContainer
+extends Node
 
 
-signal hotbar_updated
+#inventory data structure
+var inventory = []
 
-var hotbar = []
-
-func get_hotbar():
-	# traverse through all slots and get the first 9
-	for i in range(9):
-		var child = get_index(i)
-		hotbar.append(child)
+# Initialize inventory with empty slots (assuming a fixed size for simplicity)
+func _init():
+	inventory.resize(27)
 
 
 func add_item(ID="0"):
@@ -27,7 +24,5 @@ func add_item(ID="0"):
 		if i.filled == false:
 			index = i.get_index() #get index of first unfilled slot
 			break
-	if index < 9:	#if it's a hotbar item
-		var hotbar = get_hotbar()	# get hotbar
-		hotbar_updated.emit() #send hotbar update signal
+	
 	get_child(index).set_property(item_data) #add item to that index
