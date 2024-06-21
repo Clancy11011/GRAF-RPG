@@ -344,6 +344,7 @@ layer_1/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 
 [node name="PlayerCharacterMain" parent="." instance=ExtResource("7_cju7h")]
 position = Vector2(179, 133)
+move_speed = 100.0
 
 [node name="CasinoWorker" parent="." instance=ExtResource("5_ifec2")]
 z_index = -1
