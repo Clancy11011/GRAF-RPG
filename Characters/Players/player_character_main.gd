@@ -11,6 +11,7 @@ class_name Player
 @onready var state_machine = animation_tree.get("parameters/playback")
 @onready var healthbar = $health/healthbar
 @onready var interaction_area: InteractionArea = $InteractionArea
+@onready var gun = $Gun
 
 
 var player : CharacterBody2D
@@ -36,6 +37,11 @@ func _physics_process(_delta):
 	velocity = input_direction * move_speed
 	move_and_slide()
 	change_state()
+	
+	if Input.is_action_just_pressed("hide_item") && gun.visible == true:
+		gun.visible = false
+	elif Input.is_action_just_pressed("hide_item") && gun.visible == false:
+		gun.visible = true
 
 func update_animation_param(move_input : Vector2):
 	
