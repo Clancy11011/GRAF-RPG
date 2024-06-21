@@ -99,7 +99,7 @@ func _on_decrease_bet_button_up():
 	
 	
 func updatePlayerCash():
-	var tween = create_tween()
-	tween.tween_property(resultLabel, "position", Vector2(2,2), 1)
+	#var tween = create_tween()
+	#tween.tween_property(resultLabel, "position", Vector2(2,2), 1)
 	#tween.interpolate_property()
 	resultLabel.text = "$" + str(PlayerVariables.money)
