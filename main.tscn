@@ -35,8 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://b71vcyvhmm5m8" path="res://Assets/scenery/decor/trashCan.png" id="21_i2x3c"]
 [ext_resource type="Texture2D" uid="uid://fguw8nd3nq7u" path="res://Assets/scenery/trees/bigTree.png" id="22_lut1j"]
 [ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="24_12qje"]
-[ext_resource type="PackedScene" path="res://bat.tscn" id="26_do3w2"]
-[ext_resource type="PackedScene" path="res://fishing_pole.tscn" id="38_ubqv4"]
+[ext_resource type="PackedScene" uid="uid://bqd6u3owxbeww" path="res://bat.tscn" id="26_do3w2"]
+[ext_resource type="PackedScene" uid="uid://dx4bkbleegteb" path="res://fishing_pole.tscn" id="38_ubqv4"]
 [ext_resource type="PackedScene" uid="uid://dk8hpkokbs1cy" path="res://Buildings/casino/casino_building.tscn" id="40_ycqwi"]
 
 [sub_resource type="Gradient" id="Gradient_vn7mg"]
