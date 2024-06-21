@@ -295,7 +295,6 @@ offset_bottom = 59.0
 scale = Vector2(0.782999, 1.31626)
 
 [node name="Gun" parent="." instance=ExtResource("4_nkflq")]
-visible = false
 position = Vector2(1, -7)
 scale = Vector2(0.404354, 0.425849)
 
