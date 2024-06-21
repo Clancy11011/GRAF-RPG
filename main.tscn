@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=70 format=3 uid="uid://l6kjlcn71v8h"]
+=======
+[gd_scene load_steps=62 format=3 uid="uid://l6kjlcn71v8h"]
+>>>>>>> 7bdfbb08407a1eb1ceae7e24147488178968a054
 
 [ext_resource type="Script" path="res://main.gd" id="1_jk5ca"]
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
@@ -34,7 +38,12 @@
 [ext_resource type="PackedScene" uid="uid://cdodcwognee1u" path="res://Items/abstract_item.tscn" id="20_32880"]
 [ext_resource type="Texture2D" uid="uid://b71vcyvhmm5m8" path="res://Assets/scenery/decor/trashCan.png" id="21_i2x3c"]
 [ext_resource type="Texture2D" uid="uid://cxk4oqxp8djd7" path="res://Assets/thehut.png" id="24_12qje"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" path="res://bat.tscn" id="26_do3w2"]
+=======
+[ext_resource type="PackedScene" uid="uid://bqd6u3owxbeww" path="res://bat.tscn" id="26_do3w2"]
+[ext_resource type="PackedScene" uid="uid://c88wapf4103tl" path="res://fishing_pole.tscn" id="34_yqy6r"]
+>>>>>>> 7bdfbb08407a1eb1ceae7e24147488178968a054
 [ext_resource type="PackedScene" uid="uid://bkfdkxqid1vgm" path="res://UI/Casino/Slots/slot_machine.tscn" id="38_sycie"]
 [ext_resource type="PackedScene" uid="uid://dk8hpkokbs1cy" path="res://Buildings/casino/casino_building.tscn" id="40_ycqwi"]
 
@@ -3212,7 +3221,7 @@ layer_5/tile_data = PackedInt32Array(-589793, 21, 0, -524257, 21, 1, -589792, 65
 position = Vector2(262.866, -349.101)
 
 [node name="Guard" parent="." instance=ExtResource("3_ycq8j")]
-position = Vector2(50, 94)
+position = Vector2(380, -255)
 
 [node name="PlayerCharacterMain" parent="." instance=ExtResource("2_3esdj")]
 position = Vector2(169, 77)
@@ -3248,7 +3257,16 @@ texture = ExtResource("24_12qje")
 position = Vector2(961, -41)
 
 [node name="slot_machine" parent="." instance=ExtResource("38_sycie")]
+visible = false
 position = Vector2(219, 40)
 
 [node name="casino_building" parent="." instance=ExtResource("40_ycqwi")]
+<<<<<<< HEAD
 position = Vector2(483, 33)
+=======
+z_index = -1
+position = Vector2(487, 26)
+
+[node name="FishingPole" parent="." instance=ExtResource("34_yqy6r")]
+position = Vector2(482, -545)
+>>>>>>> 7bdfbb08407a1eb1ceae7e24147488178968a054
