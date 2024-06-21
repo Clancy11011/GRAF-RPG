@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://ck1vgnc6u3lfd" path="res://UI/inventory/ui/inventory_hotbar_ui.tscn" id="9_at6ns"]
 [ext_resource type="Script" path="res://UI/inventory/ui/inventory_hotbar_ui.gd" id="10_0o03v"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vside"]
-size = Vector2(12, 7.26859)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2fjj"]
+size = Vector2(6, 4.53718)
 
 [sub_resource type="Animation" id="Animation_63o6k"]
 length = 0.001
@@ -247,15 +247,17 @@ states/Walk/position = Vector2(631.5, 100.875)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_sn5vr"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_j1q6t"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_wif4l")]
 
 [node name="PlayerCharacterMain" type="CharacterBody2D" groups=["Player"]]
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_1t516")
-move_speed = null
 start_direction = Vector2(2.08165e-12, -1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, 2)
 scale = Vector2(0.190627, 0.217718)
 texture = ExtResource("2_8x40j")
+offset = Vector2(0, -65)
 hframes = 7
 vframes = 4
 frame = 5
@@ -266,9 +268,10 @@ position_smoothing_enabled = true
 script = ExtResource("3_b3a15")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8.01002)
+y_sort_enabled = true
+position = Vector2(0, -5)
 scale = Vector2(1, 2.20401)
-shape = SubResource("RectangleShape2D_vside")
+shape = SubResource("RectangleShape2D_d2fjj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -292,7 +295,8 @@ offset_bottom = 59.0
 scale = Vector2(0.782999, 1.31626)
 
 [node name="Gun" parent="." instance=ExtResource("4_nkflq")]
-position = Vector2(5, 8)
+visible = false
+position = Vector2(1, -7)
 scale = Vector2(0.404354, 0.425849)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

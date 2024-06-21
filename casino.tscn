@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cdk3chljkka6d"]
+[gd_scene load_steps=19 format=3 uid="uid://cdk3chljkka6d"]
 
 [ext_resource type="Texture2D" uid="uid://bwg7funfa3es4" path="res://Assets/wood flooring.png" id="1_2l6pk"]
 [ext_resource type="Script" path="res://Buildings/casino/casino.gd" id="1_48j36"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://de7sk8el7b2vw" path="res://Assets/tilemaps/overworld_tileset_grass.png" id="3_ea7xo"]
 [ext_resource type="Texture2D" uid="uid://cxidut4qo43x8" path="res://Assets/tilemaps/Counter.png" id="4_giqd5"]
 [ext_resource type="PackedScene" uid="uid://bb37vl1t3nb2g" path="res://casino_worker.tscn" id="5_ifec2"]
-[ext_resource type="PackedScene" uid="uid://bjj5cg0yoxn0r" path="res://casino_worker_2.tscn" id="6_jm1it"]
+[ext_resource type="Texture2D" uid="uid://cry8k8kuwvqk8" path="res://Assets/scenery/decor/carpet.png" id="6_3vxvs"]
+[ext_resource type="PackedScene" path="res://casino_worker_2.tscn" id="6_jm1it"]
 [ext_resource type="PackedScene" uid="uid://dgx4w61w4d5pp" path="res://Characters/Players/player_character_main.tscn" id="7_cju7h"]
 [ext_resource type="PackedScene" uid="uid://dqfhlcomcciyd" path="res://Interaction/Interaction Area/interaction_area.tscn" id="9_2ug0t"]
 [ext_resource type="PackedScene" uid="uid://bkfdkxqid1vgm" path="res://UI/Casino/Slots/slot_machine.tscn" id="10_jr45g"]
@@ -303,11 +304,17 @@ texture = ExtResource("4_giqd5")
 1:1/0 = 0
 0:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lf3ia"]
+texture = ExtResource("6_3vxvs")
+0:0/0 = 0
+1:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_w8gcg"]
 sources/0 = SubResource("TileSetAtlasSource_pth5r")
 sources/1 = SubResource("TileSetAtlasSource_6yyo1")
 sources/2 = SubResource("TileSetAtlasSource_sx4f0")
 sources/3 = SubResource("TileSetAtlasSource_w32ky")
+sources/4 = SubResource("TileSetAtlasSource_lf3ia")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ddhrq"]
 radius = 18.1108
@@ -316,11 +323,17 @@ radius = 18.1108
 script = ExtResource("1_48j36")
 
 [node name="TileMap" type="TileMap" parent="."]
+z_index = -1
 tile_set = SubResource("TileSet_w8gcg")
 format = 2
 layer_0/name = "TopLayer"
+<<<<<<< HEAD
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(458769, 65537, 1, 458768, 1, 1, 327697, 65537, 1, 327696, 1, 1, 196625, 196609, 1, 196624, 131073, 1, 131089, 196609, 0, 131088, 131073, 0, 589824, 327682, 16, 65549, 3, 0, 65548, 3, 0, 65547, 65539, 0, 65550, 3, 1, 14, 3, 2, 11, 65539, 1, 327687, 262145, 0, 393223, 262145, 1, 327688, 327681, 0, 393224, 327681, 1, 327684, 262145, 0, 393220, 262145, 1, 327685, 327681, 0, 393221, 327681, 1, 327681, 262145, 0, 393217, 262145, 1, 327682, 327681, 0, 393218, 327681, 1, 589835, 4, 0, 589836, 65540, 0)
+=======
 layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(458769, 65537, 1, 458768, 1, 1, 327697, 65537, 1, 327696, 1, 1, 196625, 196609, 1, 196624, 131073, 1, 131089, 196609, 0, 131088, 131073, 0, 589824, 327682, 16, 65549, 3, 0, 65548, 3, 0, 65547, 65539, 0, 65550, 3, 1, 14, 3, 2, 11, 65539, 1, 327687, 262145, 0, 393223, 262145, 1, 327688, 327681, 0, 393224, 327681, 1, 327684, 262145, 0, 393220, 262145, 1, 327685, 327681, 0, 393221, 327681, 1, 327681, 262145, 0, 393217, 262145, 1, 327682, 327681, 0, 393218, 327681, 1)
+>>>>>>> 7bdfbb08407a1eb1ceae7e24147488178968a054
 layer_1/name = "GroundLayer"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
@@ -343,7 +356,7 @@ position = Vector2(218, 11)
 [node name="InteractionArea" parent="." instance=ExtResource("9_2ug0t")]
 
 [node name="exitShape" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(85, 141)
+position = Vector2(192, 151)
 shape = SubResource("CircleShape2D_ddhrq")
 
 [node name="slot_machine" parent="." instance=ExtResource("10_jr45g")]
