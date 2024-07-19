@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://di7s32cpdiuh4"]
+
+[ext_resource type="Script" path="res://PortalToBatBoss.gd" id="1_ub4nn"]
+[ext_resource type="Texture2D" uid="uid://cm4y2wrejv83r" path="res://Tilesets/NPCs/Portal.png" id="1_v547m"]
+[ext_resource type="Script" path="res://Interaction/Interaction Area/interaction_area.gd" id="2_1q2cv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aduf3"]
+radius = 8.0
+
+[node name="PortalToBatBoss" type="Node2D"]
+script = ExtResource("1_ub4nn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v547m")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_1q2cv")
+action_name = "enter"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_aduf3")
+
+[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="_on_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="InteractionArea" method="_on_body_exited"]

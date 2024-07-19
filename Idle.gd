@@ -85,7 +85,8 @@ func random_direction():
 		4:
 			current_states = enemy_states.PAUSE
 
-func _on_timer_timeout():
+func _on_walk_timer_timeout():
 	random_generation()
 	$WalkTimer.start()
 	randomize_wander()
+

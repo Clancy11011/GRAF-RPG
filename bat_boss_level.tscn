@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://f5tk0r4tss2k"]
+[gd_scene load_steps=6 format=3 uid="uid://f5tk0r4tss2k"]
 
 [ext_resource type="Texture2D" uid="uid://c566xubq302p0" path="res://Assets/UnderwaterLandscape.png" id="1_ri7tc"]
 [ext_resource type="PackedScene" uid="uid://c4nmfh8ulu475" path="res://bat_boss.tscn" id="2_j4prp"]
+[ext_resource type="PackedScene" uid="uid://dgx4w61w4d5pp" path="res://Characters/Players/player_character_main.tscn" id="3_fn8fn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ftse"]
 texture = ExtResource("1_ri7tc")
@@ -37,3 +38,5 @@ layer_1/tile_data = PackedInt32Array(2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 1, 6, 0, 1
 
 [node name="bat_boss" parent="." instance=ExtResource("2_j4prp")]
 position = Vector2(303, 142)
+
+[node name="PlayerCharacterMain" parent="." instance=ExtResource("3_fn8fn")]

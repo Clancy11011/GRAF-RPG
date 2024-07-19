@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dk8hpkokbs1cy"]
 
 [ext_resource type="Script" path="res://Buildings/casino/casino_building.gd" id="1_cgu2o"]
-[ext_resource type="Texture2D" path="res://Assets/casino/Casino.png" id="2_xkekl"]
+[ext_resource type="Texture2D" uid="uid://bxhg0mer0u78s" path="res://Assets/casino/Casino.png" id="2_xkekl"]
 [ext_resource type="PackedScene" uid="uid://dqfhlcomcciyd" path="res://Interaction/Interaction Area/interaction_area.tscn" id="3_qvb0p"]
 
 [sub_resource type="Animation" id="Animation_0df7w"]

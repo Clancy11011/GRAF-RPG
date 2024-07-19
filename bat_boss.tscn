@@ -10,23 +10,6 @@
 radius = 14.9998
 height = 64.0104
 
-[sub_resource type="Animation" id="Animation_ay7na"]
-resource_name = "front_left"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 4, 5]
-}
-
 [sub_resource type="Animation" id="Animation_qmymq"]
 length = 0.001
 tracks/0/type = "value"
@@ -40,22 +23,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [3]
-}
-
-[sub_resource type="Animation" id="Animation_ws7dm"]
-resource_name = "front_right"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
 }
 
 [sub_resource type="Animation" id="Animation_c2qwq"]
@@ -88,6 +55,39 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_ay7na"]
+resource_name = "front_left"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_ws7dm"]
+resource_name = "front_right"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_spxc0"]
@@ -183,7 +183,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_bdbhc")
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/Idle/blend_position = Vector2(0, 0)
+parameters/Idle/blend_position = Vector2(2.08165e-12, -0.1)
 parameters/Idle/0/blend_position = Vector2(0, 0)
 parameters/Idle/1/blend_position = Vector2(0, 0)
 parameters/Idle/2/blend_position = Vector2(0, 0)
@@ -198,12 +198,16 @@ parameters/Walk/3/blend_position = Vector2(0, 0)
 script = ExtResource("3_12h7p")
 initial_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine"]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("4_pky7v")
+enemy = NodePath("../..")
 
 [node name="WalkTimer" type="Timer" parent="StateMachine/Idle"]
 wait_time = 3.0
 autostart = true
 
-[node name="Follow" type="Node" parent="StateMachine"]
+[node name="Follow" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("5_bd2er")
+enemy = NodePath("../..")
+
+[connection signal="timeout" from="StateMachine/Idle/WalkTimer" to="StateMachine/Idle" method="_on_walk_timer_timeout"]
